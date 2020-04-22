@@ -29,3 +29,4 @@ Podemos decir que hay tres areas que ocupan los archivos cuando trabajamos con g
 2. area de preparación 
 3. directorio de git 
 
+git add . agrega todos los archivos del directorio de trabajo al area de preparación 
