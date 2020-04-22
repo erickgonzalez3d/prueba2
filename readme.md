@@ -29,4 +29,14 @@ Podemos decir que hay tres areas que ocupan los archivos cuando trabajamos con g
 2. area de preparación 
 3. directorio de git 
 
-git add . agrega todos los archivos del directorio de trabajo al area de preparación 
+git add . agrega todos los archivos del directorio de trabajo al area de preparación
+
+para quitar el archivo de la zona de espera uso el command  "git restore --staged <archivo>-- y verifique
+
+cuando estamos trabajando con archivos que no queramos meter en el repositorio con git . podemos usar 
+  git add -A
+  este comando le hace un git add a todos los archivos que ya estaban trakeados  
+
+<git log> es el comando que muestra los commit hechos hasta el momento
+
+al hacer un git add a todos los archivos trabajados el commit guarda los cambios de todos 
