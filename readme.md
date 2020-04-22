@@ -40,3 +40,12 @@ cuando estamos trabajando con archivos que no queramos meter en el repositorio c
 <git log> es el comando que muestra los commit hechos hasta el momento
 
 al hacer un git add a todos los archivos trabajados el commit guarda los cambios de todos 
+
+para cambiar el commit uso git commit --amend 
+
+para ignorar archivos y no agregarlos en los commits creo el archivos .gitignore y en el 
+escribo los nombres de los archivos a ignorar 
+
+si el archivo .gitignore se sigue mostrando en el git status puedo agregar el nombre .gitignore dentro del archivo con ese nombre que es el que esta diciendo a cuales ignorar 
+
+tambien podemos hacer un git add .gitignore
