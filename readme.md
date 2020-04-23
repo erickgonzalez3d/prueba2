@@ -49,3 +49,5 @@ escribo los nombres de los archivos a ignorar
 si el archivo .gitignore se sigue mostrando en el git status puedo agregar el nombre .gitignore dentro del archivo con ese nombre que es el que esta diciendo a cuales ignorar 
 
 tambien podemos hacer un git add .gitignore
+
+tengo problemas con el commit
