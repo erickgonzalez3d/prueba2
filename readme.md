@@ -1,4 +1,4 @@
-## cusrso git desde 0
+## curso git desde 0
 flujo de trabajo en git
 primero creamos y elegimos un directorio TRABAJOprincipal
 lo podemos hacer manualmente o desde la terminal de git con el comando mkdir TRABAJOprincipal
@@ -68,3 +68,4 @@ con el comando ""`git log --before="AAAA-MM-DD hh:mm:ss``"
 para filtrar en un rango de tiempo podemos conbinar usando --after="AAAA-MM-DD hh:mm:ss"  --before="AAAA-MM-DD hh:mm:ss" y nos mostrara los commit hechos en dicho rango de tiempo
 
 git commit --amend se usa para cambiar el nombre del commit, pero tambien para agregar nuevos cambios que talvez no habia hecho o que estaban en el directorio pero no estaban en zona traking cuando hice el commit ..
+dd 
