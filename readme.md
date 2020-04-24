@@ -56,7 +56,7 @@ el comando `git log --graph` muestra los commit con sus ramificaciones en un gra
 
 se puede combinar `git log --graph` y `git log --oneline` en el comando `git log --oneline --graph`  y mostrara los titulos con grafico
 
-puedo indicar cuantos comits quiero ver con `git log -5` o el numero que quiera
+puedo indicar  cuantos comits quiero ver con `git log  -5` o el numero que quiera
 
 
 puedo ver los commmits ordenandolos por fecha
