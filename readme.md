@@ -69,3 +69,5 @@ para filtrar en un rango de tiempo podemos conbinar usando --after="AAAA-MM-DD h
 
 git commit --amend se usa para cambiar el nombre del commit, pero tambien para agregar nuevos cambios que talvez no habia hecho o que estaban en el directorio pero no estaban en zona traking cuando hice el commit ..
 dd 
+
+el git restore  saca el archivo del area de preparación y deja en el directorio como no rastreado 
