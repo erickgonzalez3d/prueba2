@@ -118,6 +118,11 @@ creo una rama cuando quiero hacer cambios a los archivos sin modificar la rama m
 ubicado en el directorio de trabajo uso el comando `git clone <url_del_repositorio_github> nombreQueQuiero`
 a diferencia de descargar el repositorio, el git clone trae una copia del repositorio con todo su historial 
 
+al hacer un `git log -- decorate --oneline --graph --all` me muestra un arbol de los commit con todas las ramas  
+
+puedo ver las diferencias entre un commit y otro con sus numeros `git diff 17dc8c0 18dc8c0` 
+
+para ir a un cambio en el tiempo uso el comando `git checkout <numeroDelCommit>` despues de esto al hacer un `git status` me indicara que el <HEAD> lo saque del commit master y esta en el actual commit 
 
 
 
