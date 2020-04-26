@@ -109,5 +109,8 @@ cuando hago un cambio en uno o mas archivos del repositorio, github desktop lo d
 
 tambien puedo crear el repositorio directamente desde l a interfaz de github, con la opción de `add repository` y eligiendo un directorio con archivos para subir o con la opcion de crear 
 
+puedo hacer cambios desde la web github y despues sincronizarlos con el repositorio local 
+para esta debo hacer un pull y push 
+
 
 
