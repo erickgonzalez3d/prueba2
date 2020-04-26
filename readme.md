@@ -112,5 +112,7 @@ tambien puedo crear el repositorio directamente desde l a interfaz de github, co
 puedo hacer cambios desde la web github y despues sincronizarlos con el repositorio local 
 para esta debo hacer un pull y push 
 
+creo una rama cuando quiero hacer cambios a los archivos sin modificar la rama master luego comparo la rama master con la rama que modifique y hago un merge de los cambios hacia master y despues puedo borrar la rama que no necesito
+
 
 
