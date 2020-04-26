@@ -67,9 +67,9 @@ puedo indicar  cuantos comits quiero ver con `git log  -5` o el numero que quier
 
 puedo ver los commmits ordenandolos por fecha
 
-con el comando git log --after="AAAA-MM-DD hh:mm:ss"
+con el comando `git log --after="AAAA-MM-DD hh:mm:ss`
 
-con el comando ""`git log --before="AAAA-MM-DD hh:mm:ss``"
+con el comando ""`git log --before="AAAA-MM-DD hh:mm:ss`"
 
 para filtrar en un rango de tiempo podemos conbinar usando --after="AAAA-MM-DD hh:mm:ss"  --before="AAAA-MM-DD hh:mm:ss" y nos mostrara los commit hechos en dicho rango de tiempo
 
@@ -78,18 +78,24 @@ dd
 
 el git restore  saca la modificación o el archivo  nuevo del area de detección para trakeo y deja en el directorio como no rastreado 
 
-si ya lo agregue al area de preparación con <git add .> puedo sacarlo con {git restore --staged} y tambien funciona {git reset HEAD |archivo|}
+si ya lo agregue al area de preparación con <git add .> puedo sacarlo con {`git restore --staged`} y tambien funciona `{git reset HEAD |archivo|}`
 
-el git checkout quita los cambios que tenga el archivo en seguimiento pero se ya estan en la zona de preparación no los quita, se tendria que hacer un git {restore --staged} y despues el checkout 
+el git checkout quita los cambios que tenga el archivo en seguimiento pero se ya estan en la zona de preparación no los quita, se tendria que hacer un git `{restore --staged}` y despues el checkout 
 
 ## sincronizar un repositorio con github desde consola
 
 debo crear una cuenta en gitbub y un repositorio vacio este tendra una url 
 
 En git teniendo un directorio de trabajo con un repositorio limpio o sin cambios por añadir 
-usamos el comando git remote add origin <url_de_repositorio_github> esto enlazara los repositorios 
+usamos el comando `git remote add origin <url_de_repositorio_github>` esto enlazara los repositorios 
 
 luego uso el comando `git push -u origin master` para enviar los archivos de repositorio local al de la nube 
+
+hay que tener cuidado de no hacer un push cuando ya hay un commit 
+
+para rectificar la dirección del repositorio en github hacemos un `git remote remove origin` 
+
+
 
 
 
