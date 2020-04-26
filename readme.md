@@ -96,8 +96,9 @@ hay que tener cuidado de no hacer un push cuando ya hay un commit
 para rectificar la dirección del repositorio en github hacemos un `git remote remove origin` 
 
 
----
-###este es el cambio de desktop
+--- 
+
+### este es el cambio de desktop
 
    
    # TRABAJO CON GITHUB DESKTOP
