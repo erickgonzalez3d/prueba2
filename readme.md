@@ -95,15 +95,15 @@ hay que tener cuidado de no hacer un push cuando ya hay un commit
 
 para rectificar la dirección del repositorio en github hacemos un `git remote remove origin` 
 
-<<<<<<< HEAD
+
 
 este es el cambio de desktop
-=======
+
    
    # TRABAJO CON GITHUB DESKTOP
       
       Instalo el programa en la maquina e inicio sesión de github en el luego puedo clonar el repositorio en una ruta local 
->>>>>>> 93d62d6199a03e15d9b5a59e3c73982027c58cef
+
 
 
 
