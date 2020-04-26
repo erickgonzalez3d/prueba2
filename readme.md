@@ -114,5 +114,10 @@ para esta debo hacer un pull y push
 
 creo una rama cuando quiero hacer cambios a los archivos sin modificar la rama master luego comparo la rama master con la rama que modifique y hago un merge de los cambios hacia master y despues puedo borrar la rama que no necesito
 
+## clonar un repositorio
+ubicado en el directorio de trabajo uso el comando `git clone <url_del_repositorio_github> nombreQueQuiero`
+a diferencia de descargar el repositorio, el git clone trae una copia del repositorio con todo su historial 
+
+
 
 
