@@ -14,6 +14,12 @@ con los comandos ls y cd desde la terminal de git nos ubicamos en el directorio 
 
  para trakearlos hacemos un (git add <archivo>)
 git
+  git add . para todos los  archivos en el directorio
+  git add -A para los archivos ya trakeados 
+  git add *.css para los archivos con esa extensión
+
+cuando borro un archivo del directorio que estaba en el repositorio, git nota el cambio y para borrarlo del repositorio debo hacer un git add al archivo borrado y luego un git commit para grabar el cambio 
+
   si queremos destrakearlo usamos un (git rm --cached <archivo>)
 
  luego para guardarlo en el repositorio (git commit -m "mensaje descriptivo del cambio")
@@ -70,4 +76,21 @@ para filtrar en un rango de tiempo podemos conbinar usando --after="AAAA-MM-DD h
 git commit --amend se usa para cambiar el nombre del commit, pero tambien para agregar nuevos cambios que talvez no habia hecho o que estaban en el directorio pero no estaban en zona traking cuando hice el commit ..
 dd 
 
-el git restore  saca el archivo del area de preparación y deja en el directorio como no rastreado 
+el git restore  saca la modificación o el archivo  nuevo del area de detección para trakeo y deja en el directorio como no rastreado 
+
+si ya lo agregue al area de preparación con <git add .> puedo sacarlo con {git restore --staged} y tambien funciona {git reset HEAD |archivo|}
+
+el git checkout quita los cambios que tenga el archivo en seguimiento pero se ya estan en la zona de preparación no los quita, se tendria que hacer un git {restore --staged} y despues el checkout 
+
+## sincronizar un repositorio con github desde consola
+
+debo crear una cuenta en gitbub y un repositorio vacio este tendra una url 
+
+En git teniendo un directorio de trabajo con un repositorio limpio o sin cambios por añadir 
+usamos el comando git remote add origin <url_de_repositorio_github> esto enlazara los repositorios 
+
+luego uso el comando `git push -u origin master` para enviar los archivos de repositorio local al de la nube 
+
+
+
+
