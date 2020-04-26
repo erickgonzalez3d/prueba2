@@ -124,5 +124,9 @@ puedo ver las diferencias entre un commit y otro con sus numeros `git diff 17dc8
 
 para ir a un cambio en el tiempo uso el comando `git checkout <numeroDelCommit>` despues de esto al hacer un `git status` me indicara que el <HEAD> lo saque del commit master y esta en el actual commit 
 
+<HEAD> representa el punto en el tiempo donde estamos ubicados, con el comando `git checkout` cambiamos en el tiempo si queremos volver al ultimo commit uso el `git checkout master` 
+
+
+
 
 
