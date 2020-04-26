@@ -104,7 +104,7 @@ este es el cambio de desktop
       
       Instalo el programa en la maquina e inicio sesión de github en el luego puedo clonar el repositorio en una ruta local 
 
-
+cuando hago un cambio en uno o mas archivos del repositorio, github desktop lo detecta 
 
 
 
