@@ -107,5 +107,7 @@ para rectificar la dirección del repositorio en github hacemos un `git remote r
 
 cuando hago un cambio en uno o mas archivos del repositorio, github desktop lo detecta 
 
+tambien puedo crear el repositorio directamente desde l a interfaz de github, con la opción de `add repository` y eligiendo un directorio con archivos para subir o con la opcion de crear 
+
 
 
