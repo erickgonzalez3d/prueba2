@@ -81,7 +81,7 @@ el git restore  saca la modificación o el archivo  nuevo del area de detección
 si ya lo agregue al area de preparación con <git add .> puedo sacarlo con {`git restore --staged`} y tambien funciona `{git reset HEAD |archivo|}`
 
 el git checkout quita los cambios que tenga el archivo en seguimiento pero se ya estan en la zona de preparación no los quita, se tendria que hacer un git `{restore --staged}` y despues el checkout 
-
+   
 ## sincronizar un repositorio con github desde consola
 
 debo crear una cuenta en gitbub y un repositorio vacio este tendra una url 
