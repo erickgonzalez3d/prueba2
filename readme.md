@@ -140,7 +140,7 @@ le puedo poner etiquetas a cualquier punto de la historia
 las etiquetas anotadas sirven como un identificador mas preciso de un commit, como para establecer una versión ya que queda registrado el nombre del que hizo el tag y un mensaje adicional al propio del commit 
 -para una atiqueta anotada `git tag -a <nombre> -m "mensaje"` 
 
-para ver abrir las etiquetas despues de un `git tag` usamos `git show <nombreDeEtiqueta>` y mostrara el commit completo con la etiqueta  
+para ver abrir las etiquetas despues de un `git tag` usamos `git show <nombreDeEtiqueta>` y mostrara el commit completo con la etiqueta, tambien con un git log el commit se vera identificado con la etiqueta 
 
 
 
