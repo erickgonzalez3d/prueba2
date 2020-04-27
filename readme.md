@@ -174,7 +174,7 @@ al cambiar de branch y empezar a generar commits el HEAD va a continuar por el c
 
 las ramas  apuntan al commit del momento en que creamos la rama y de hay en adelante al ultimo commit de la misma 
 
-si me devuelvo en el historial desde una rama alterna a un commit anterior
+si me devuelvo en el historial desde una rama alterna a un commit anterior del cual inicio esa rama no estare en esa rama 
 
 
 
