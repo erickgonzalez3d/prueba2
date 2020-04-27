@@ -127,7 +127,8 @@ para ir a un cambio en el tiempo uso el comando `git checkout <numeroDelCommit>`
 <HEAD> representa el punto en el tiempo donde estamos ubicados, con el comando `git checkout` cambiamos en el tiempo si queremos volver al ultimo commit uso el `git checkout master` 
 
    
-   ## etiqueta git tag
+   ## etiqueta git tag 
+git tag lista las etiquetas en orden alfabetico 
 para marcar un punto en la historia del proyecto o una versión que estaba corriendo muy bien 
 el comando `git tag` me permite ver las etiquetas que hay, las ordena en orde alfabetico 
 existen las etiquetas ligeras y las etiquetas anotadas 
@@ -141,6 +142,13 @@ las etiquetas anotadas sirven como un identificador mas preciso de un commit, co
 -para una atiqueta anotada `git tag -a <nombre> -m "mensaje"` 
 
 para ver abrir las etiquetas despues de un `git tag` usamos `git show <nombreDeEtiqueta>` y mostrara el commit completo con la etiqueta, tambien con un git log el commit se vera identificado con la etiqueta 
+
+para crear una etiqueta en un punto de la historia que no sea el HEAD uso el comando de la etiqueta + el numero de identificacion o marcado del commit `git tag <nombreEtiqueta> (1numerocommit23456)` el {numero del commit =o= SUMA DE COMPROBACIÓN} puede ser la version larga o la version corta 
+
+Puedo filtrar las etiqueta en comun como por ejemplo las versione v1, v1.2, v1.3.... agregando el parametro -l o --list al comando de esta forma `git tag -l "v1.*"` y me listara los tag que empiezan por v1. 
+
+
+
 
 
 
