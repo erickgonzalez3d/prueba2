@@ -91,9 +91,7 @@ usamos el comando `git remote add origin <url_de_repositorio_github>` esto enlaz
 
 luego uso el comando `git push -u origin master` para enviar los archivos de repositorio local al de la nube 
 
-hay que tener cuidado de no hacer un push cuando ya hay un commit o un cambio en el repositorio porque va a generar un conflicto.... para solucionar esos conflictos puedes descartar los cambios locales o compararlos haciendo un pull y arreglando el conflicto y despues hacer el push que tenga tanto cambios locales como correciones el linea
-
-
+hay que tener cuidado de no hacer un push cuando ya hay un commit 
 
 para rectificar la dirección del repositorio en github hacemos un `git remote remove origin` 
 
@@ -127,6 +125,20 @@ puedo ver las diferencias entre un commit y otro con sus numeros `git diff 17dc8
 para ir a un cambio en el tiempo uso el comando `git checkout <numeroDelCommit>` despues de esto al hacer un `git status` me indicara que el <HEAD> lo saque del commit master y esta en el actual commit 
 
 <HEAD> representa el punto en el tiempo donde estamos ubicados, con el comando `git checkout` cambiamos en el tiempo si queremos volver al ultimo commit uso el `git checkout master` 
+
+   
+   ## etiqueta git tag
+para marcar un punto en la historia del proyecto o una versión que estaba corriendo muy bien 
+el comando `git tag` me permite ver las etiquetas que hay 
+existen las etiquetas ligeras y las etiquetas anotadas 
+ligeras 
+las ligeras son un nombre, identificador, o marca que le ponemos a un commit se hace con el comando 
+`git tag nombreEtiqueta`    -->> esto agrega el tag al ultimo commit hecho
+
+le puedo poner etiquetas a cualquier punto de la historia 
+las etiquetas anotadas sirven como un identificador mas preciso de un commit, como para establecer una versión ya que queda registrado el nombre del que hizo el tag y un mensaje adicional al propio del commit 
+
+
 
 
 
