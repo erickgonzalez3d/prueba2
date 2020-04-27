@@ -200,6 +200,8 @@ primero tenemos que ubicarnos en la RAMA DESTINO y ejecutamos el comando git mer
 
 
 
+` git push --set-upstream origin ramacon` este comando configura la rama actual como la que va a hacer los push al repositorio remoto 
+
 
 
 
