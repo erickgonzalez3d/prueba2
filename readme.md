@@ -24,6 +24,8 @@ cuando borro un archivo del directorio que estaba en el repositorio, git nota el
 
  luego para guardarlo en el repositorio (git commit -m "mensaje descriptivo del cambio")
 
+puedo ahorrarme el commando de git add agregando parametros al comando commit el -a agragara el archivo a la zona de preparación -m el mensaje y los puedo unir y funcionan igual  -am  seria `git commit -am "mensaje"
+
 para ver el cambio en un archivo uso comando (git diff) esto lo puedo hacer cuando hago un cambio en el archivo y todavia no he hecho el git add    
 
 
@@ -33,7 +35,7 @@ Podemos decir que hay tres areas que ocupan los archivos cuando trabajamos con g
 
 1. directorio de trabajo
 2. area de preparación
-3. directorio de git
+3. directordddio de git
 
 git add . agrega todos los archivos del directorio de trabajo al area de preparación
 
@@ -147,12 +149,4 @@ para crear una etiqueta en un punto de la historia que no sea el HEAD uso el com
 
 Puedo filtrar las etiqueta en comun como por ejemplo las versione v1, v1.2, v1.3.... agregando el parametro -l o --list al comando de esta forma `git tag -l "v1.*"` y me listara los tag que empiezan por v1. 
 
-
-
-
-
-
-
-
-
-
+# 
