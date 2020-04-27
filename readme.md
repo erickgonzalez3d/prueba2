@@ -172,6 +172,10 @@ podemos estar en un commit al que esten apuntando varias ramas  pero el HEAD  in
 
 al cambiar de branch y empezar a generar commits el HEAD va a continuar por el camino de ese branch dejando atras en el tiempo la rama desde la cual fue creada la actual 
 
+las ramas  apuntan al commit del momento en que creamos la rama y de hay en adelante al ultimo commit de la misma 
+
+si me devuelvo en el historial desde una rama alterna a un commit anterior
+
 
 
 
