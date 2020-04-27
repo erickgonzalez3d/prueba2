@@ -164,13 +164,43 @@ este apuntador o rama es movil se desplaza al ultimo commit
 varia ramas o branches pueden estar apuntando a un mismo commit o punto en el tiempo
 para ver la especificación tecnica usamos `git branch --help` 
 
-para crear una rama usamos el comando `git branch + nombreRama`
+con el comando `git branch` se listan las ramas que hay en el repositorio 
+
+para crear una rama usamos el comando `git branch + nombreRama` desde cualquier rama donde estemos
 
 para movernos entre los branch usamos el comando `git checkout nobreRama` cuando ejecutamos este comando el apuntador del `git log indicara la rama donde este asi HEAD -> rama, debemos tener en cuenta que cuando se crea el branch no se modifica la posición del head, solo hasta ejecutar el checkout
 
 podemos estar en un commit al que esten apuntando varias ramas  pero el HEAD  indicara a cual esta afectando los commits que hagamos  
 
 al cambiar de branch y empezar a generar commits el HEAD va a continuar por el camino de ese branch dejando atras en el tiempo la rama desde la cual fue creada la actual 
+
+las ramas  apuntan al commit del momento en que creamos la rama y de hay en adelante al ultimo commit de la misma 
+
+si me devuelvo en el historial desde una rama alterna a un commit anterior del cual inicio esa rama no estare en esa rama 
+
+no hay un limite en la cantidad de ramas a crear 
+
+la rama master esta por defecto pero si se sigue deserrollando a lo largo de una rama esa podria ser la rama principal <cualquier rama puede ser la principal> 
+
+
+tambien puedo generar commit en las distintas ramas y estas tomaran su propio camino 
+
+# fusion de ramas 
+   
+       
+
+para fusionar ramas se usa el comando `git merge`
+
+primero verificamos en que rama estamos ubicados con el HEAD `git status` o con `git branch` este ultimo lo mostrara marcado y si usamos el `git branch -v` muestra el ultimo commit que hay en cada rama 
+
+no necesariamente tenemos que fusionar la rama con la mas cercana podemos hacerlo con cualquier otra 
+
+primero tenemos que ubicarnos en la RAMA DESTINO y ejecutamos el comando git merge <rama a fusionar> 
+
+
+
+
+` git push --set-upstream origin ramacon` este comando configura la rama actual como la que va a hacer los push al repositorio remoto 
 
 
 

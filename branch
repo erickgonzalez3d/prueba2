@@ -1,5 +1,6 @@
 este combio esta en la rama2 branch 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 este cambio esta hecho desde master 
 
 
@@ -25,3 +26,12 @@ este cambio esta desde la rama hola
 
 este es el segundo cambio en master
 >>>>>>> MAESTRO
+=======
+
+este cambio esta en ramacon
+
+
+
+
+ramacon
+>>>>>>> ramacon
