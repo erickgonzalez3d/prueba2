@@ -45,7 +45,11 @@ cuando estamos trabajando con archivos que no queramos meter en el repositorio c
   git add -A
   este comando le hace un git add a todos los archivos que ya estaban trakeados  
 
-<git log> es el comando que muestra los commit hechos hasta el momento
+<git log> es el comando que muestra los commit hechos hasta el momento,
+cuando agrego --decorate me resalta la información principal del commit
+si agrego --all me muestra todos los commits aunque esten por delante en el tiempo 
+--oneline me mostrara una solo linea con el commit
+--graph muestra un mapa en codigo como ayuda grafica 
 
 al hacer un git add a todos los archivos trabajados el commit guarda los cambios de todos
 
@@ -149,4 +153,13 @@ para crear una etiqueta en un punto de la historia que no sea el HEAD uso el com
 
 Puedo filtrar las etiqueta en comun como por ejemplo las versione v1, v1.2, v1.3.... agregando el parametro -l o --list al comando de esta forma `git tag -l "v1.*"` y me listara los tag que empiezan por v1. 
 
-# 
+
+   
+# ramas
+   
+
+Master es el nombre de un apuntador a la rama, asi como las etiquetas son apuntadores a los commits , master es un nombre por defecto pero podemos cambiarlo y no necesariamente tiene que ser la rama principal  
+este apuntador o rama es movil se desplaza al ultimo commit 
+
+varia ramas o branches pueden estar apuntando a un mismo commit o punto en el tiempo
+para ver la especificación tecnica usamos `git branch --help` 
