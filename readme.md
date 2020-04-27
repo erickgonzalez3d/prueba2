@@ -91,7 +91,9 @@ usamos el comando `git remote add origin <url_de_repositorio_github>` esto enlaz
 
 luego uso el comando `git push -u origin master` para enviar los archivos de repositorio local al de la nube 
 
-hay que tener cuidado de no hacer un push cuando ya hay un commit 
+hay que tener cuidado de no hacer un push cuando ya hay un commit o un cambio en el repositorio porque va a generar un conflicto.... para solucionar esos conflictos puedes descartar los cambios locales o compararlos haciendo un pull y arreglando el conflicto y despues hacer el push que tenga tanto cambios locales como correciones el linea
+
+
 
 para rectificar la dirección del repositorio en github hacemos un `git remote remove origin` 
 
