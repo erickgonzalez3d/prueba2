@@ -163,3 +163,15 @@ este apuntador o rama es movil se desplaza al ultimo commit
 
 varia ramas o branches pueden estar apuntando a un mismo commit o punto en el tiempo
 para ver la especificación tecnica usamos `git branch --help` 
+
+para crear una rama usamos el comando `git branch + nombreRama`
+
+para movernos entre los branch usamos el comando `git checkout nobreRama` cuando ejecutamos este comando el apuntador del `git log indicara la rama donde este asi HEAD -> rama, debemos tener en cuenta que cuando se crea el branch no se modifica la posición del head, solo hasta ejecutar el checkout
+
+podemos estar en un commit al que esten apuntando varias ramas  pero el HEAD  indicara a cual esta afectando los commits que hagamos  
+
+al cambiar de branch y empezar a generar commits el HEAD va a continuar por el camino de ese branch dejando atras en el tiempo la rama desde la cual fue creada la actual 
+
+
+
+
