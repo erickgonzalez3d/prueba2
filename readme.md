@@ -170,6 +170,8 @@ para crear una rama usamos el comando `git branch + nombreRama` desde cualquier 
 
 para movernos entre los branch usamos el comando `git checkout nobreRama` cuando ejecutamos este comando el apuntador del `git log indicara la rama donde este asi HEAD -> rama, debemos tener en cuenta que cuando se crea el branch no se modifica la posición del head, solo hasta ejecutar el checkout
 
+el directorio de trabajo debe estar limpio cuando cambiemos de rama o podriamos perder los cambios que aun no esten añadidos
+
 podemos estar en un commit al que esten apuntando varias ramas  pero el HEAD  indicara a cual esta afectando los commits que hagamos  
 
 al cambiar de branch y empezar a generar commits el HEAD va a continuar por el camino de ese branch dejando atras en el tiempo la rama desde la cual fue creada la actual 
@@ -202,7 +204,16 @@ primero tenemos que ubicarnos en la RAMA DESTINO y ejecutamos el comando git mer
 
 ` git push --set-upstream origin ramacon` este comando configura la rama actual como la que va a hacer los push al repositorio remoto 
 
-cuando fusionamos una rama y tiene conflictos con la actual debemos arreglar esos conflictos o añadirlos automaticamente y luego hacer un commit que confirme ese merge, en el apuntador del HEAD se mostrara el mensaje  <rama|MERGING> que indica que se esta haciendo  la corrección para el completar el merge 
+cuando fusionamos una rama y tiene conflictos con la actual debemos arreglar esos conflictos o añadirlos automaticamente y luego hacer un commit que confirme ese merge, en el apuntador del HEAD se mostrara el mensaje  <rama|MERGING> que indica que se esta haciendo  la corrección para el completar el merge con un commit, esto pasa cuando en dos ramas modificamos las mismas lineas de los archivos git mostrara un menseje asi en esas lineas de los archivos en conflicto 
+
+  >>>>>>>>>>>>>>>HEAD
+  Aca estaran las modificaciones en la rama actual
+  estan en el mismo numero de linea que en la otra rama 
+  =========
+  cambios en la otra rama en las mismas lineas  
+  
+  puedo borrar algunas lineas de cada rama o quedarme con todas y borro los simbolos de git >>>>=====<<<<<< 
+  <<<<<<<<<<<< (rama que le estoy haciendo merge)
 
 para borrar una rama o branch uso el comando `git branch -d <nombre de la rama>`, si la rama no ha sido fusionada git no dejara eliminarla con este comando hasta que se fusionen los cambios  
 
@@ -211,5 +222,13 @@ para forzar la eliminacion de una rama usamos el comando `git branch -D rama` de
 el comando `git branch --no-merge` me indica cual rama no ha sido fusionada a la rama actual y si es un cambio que deseo eliminar y no fusionar con el proyecto puedo eliminarla con branch -D 
 
 el comando `git branch --merge` me muestra las ramas que esta fusionadas con la actual 
+
+si quiero ver los cambios que tiene otra rama con respecto a la actual utilizo el comando `git show otraRama` me mostrara un equivalente al `git diff` pero este aplicado a ramas 
+
+#### volver a un rama eliminada
+
+si elimino una rama y quiero volver a trabajar en ella , puedo ir al ultimo commit que hubo en esa rama con un `git checkout <numCommit> `y crear un rama
+indicandole que vamos a saltar a ella desde la actual con el comando `git checkout -b (nomRamarestaurada)`, despues de ejecutar este comando el  HEAD va a estar ubicado en la rama restaurada, desde hay puede seguir el desarrollo de la restaurada y volver a la rama master cuando quiera 
+
 
 
