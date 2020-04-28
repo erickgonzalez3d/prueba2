@@ -206,14 +206,16 @@ primero tenemos que ubicarnos en la RAMA DESTINO y ejecutamos el comando git mer
 
 cuando fusionamos una rama y tiene conflictos con la actual debemos arreglar esos conflictos o añadirlos automaticamente y luego hacer un commit que confirme ese merge, en el apuntador del HEAD se mostrara el mensaje  <rama|MERGING> que indica que se esta haciendo  la corrección para el completar el merge con un commit, esto pasa cuando en dos ramas modificamos las mismas lineas de los archivos git mostrara un menseje asi en esas lineas de los archivos en conflicto 
 
-// >>>>>>>>>>  HEAD
-  Aca estaran las modificaciones en la rama actual
-  estan en el mismo numero de linea que en la otra rama 
-  =========
-  cambios en la otra rama en las mismas lineas  
-  
-  puedo borrar algunas lineas de cada rama o quedarme con todas y borro los simbolos de git >>>>=====<<<<<< 
-  <<<<<<<<<<<< (rama que le estoy haciendo merge)//
+>>>>>>>>>>  HEAD Aca estaran las modificaciones en la rama actual
+estan en el mismo numero de linea que en la otra rama 
+=========
+cambios en la otra rama en las mismas lineas  
+puedo borrar algunas lineas de cada rama o quedarme con todas y borro los simbolos de git 
+>>>>
+=====
+<<<<<< 
+
+<<<<<<<<< (rama que le estoy haciendo merge)
 
 para borrar una rama o branch uso el comando `git branch -d <nombre de la rama>`, si la rama no ha sido fusionada git no dejara eliminarla con este comando hasta que se fusionen los cambios  
 
