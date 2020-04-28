@@ -1,4 +1,4 @@
-## curso git desde 0
+# curso git desde 0
 flujo de trabajo en git
 primero creamos y elegimos un directorio TRABAJOprincipal
 lo podemos hacer manualmente o desde la terminal de git con el comando mkdir TRABAJOprincipal
