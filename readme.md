@@ -153,6 +153,9 @@ para crear una etiqueta en un punto de la historia que no sea el HEAD uso el com
 
 Puedo filtrar las etiqueta en comun como por ejemplo las versione v1, v1.2, v1.3.... agregando el parametro -l o --list al comando de esta forma `git tag -l "v1.*"` y me listara los tag que empiezan por v1. 
 
+asi como borro las ramas tambien puedo borrar las etiquetas con el comando `git tag -d nomEtiqueta` 
+
+y al igual que las ramas cuando se borra lo que eliminamos es el apuntador del commit pero no borramos el commit en si ya que este hace parte del historial de modificación 
 
    
 # ramas
@@ -186,6 +189,8 @@ la rama master esta por defecto pero si se sigue deserrollando a lo largo de una
 
 
 tambien puedo generar commit en las distintas ramas y estas tomaran su propio camino 
+
+puedo ver las ramas oculta con git branch --all y me mostrara la ramas que hay tanto el local como en linea 
 
 # fusion de ramas 
    
@@ -232,5 +237,26 @@ si quiero ver los cambios que tiene otra rama con respecto a la actual utilizo e
 si elimino una rama y quiero volver a trabajar en ella , puedo ir al ultimo commit que hubo en esa rama con un `git checkout <numCommit> `y crear un rama
 indicandole que vamos a saltar a ella desde la actual con el comando `git checkout -b (nomRamarestaurada)`, despues de ejecutar este comando el  HEAD va a estar ubicado en la rama restaurada, desde hay puede seguir el desarrollo de la restaurada y volver a la rama master cuando quiera 
 
+# github 
 
+es una red social para compartir codigo, corregirlo o colaborar con otros proyectos atravez de repositorios 
+
+git remote add origin <url repositorio> nos conecta a el repositorio con esa url  y lo sincronizamos con nuestro repositorio local con `git push -u origin master` 
+
+si git no deja hacer un push a repositorio web podemos intentar cambiando el email y usuario por el de la cuenta en github, lo podemos ver con `git config --global --list` y si observo el local `git config --local --list` vemos la configuración de ese repositorio en especifico y debe tener una linea que indique el repositorio al que esta enlazado  
+
+ remote.origin.url=https://github.com/ErickGonzalez3d/prueba2.git 
+
+SI NO estan conectados configuramos de nuevo el correo y el usuario de git con 
+`git config user.email "email" --global`  
+`git config user.name "nombre" --global`
+
+luego de esto probamos hacer un `git push -u origin` y  ya deberian sincronizarse el repositorio local y el de la nube de github
+
+al estar sincronizados puedo subir archivos en el desde el directorio de trabajo y el consola debe aparecer un mensaje en una nueva linea de `git status` indicando que esta actualizado con origin/master 
+
+despues de sincronizados se crea la rama "oculta" origin/master, esta sera la rama de el repositorio que no se mostrara en el git branch 
+para ver esa rama  oculta `git branch --all` 
+
+de nuevo si hago cambios y los confirmo con commits y veo el `git status` me muestra una linea informando que hay commits que no estan el la rama origin/master por lo tanto no estan actualizados con el repositorio en la nube 
 
