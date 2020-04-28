@@ -208,5 +208,8 @@ para borrar una rama o branch uso el comando `git branch -d <nombre de la rama>`
 
 para forzar la eliminacion de una rama usamos el comando `git branch -D rama` destacar que la de es mayuscula , este comando tiene el riesgo de borrar cambios que no hallamos incluido en la rama principal
 
+el comando `git branch --no-merge` me indica cual rama no ha sido fusionada a la rama actual y si es un cambio que deseo eliminar y no fusionar con el proyecto puedo eliminarla con branch -D 
+
+el comando `git branch --merge` me muestra las ramas que esta fusionadas con la actual 
 
 
