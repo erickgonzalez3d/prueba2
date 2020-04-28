@@ -203,6 +203,10 @@ primero tenemos que ubicarnos en la RAMA DESTINO y ejecutamos el comando git mer
 ` git push --set-upstream origin ramacon` este comando configura la rama actual como la que va a hacer los push al repositorio remoto 
 
 cuando fusionamos una rama y tiene conflictos con la actual debemos arreglar esos conflictos o añadirlos automaticamente y luego hacer un commit que confirme ese merge, en el apuntador del HEAD se mostrara el mensaje  <rama|MERGING> que indica que se esta haciendo  la corrección para el completar el merge 
- 
+
+para borrar una rama o branch uso el comando `git branch -d <nombre de la rama>`, si la rama no ha sido fusionada git no dejara eliminarla con este comando hasta que se fusionen los cambios  
+
+para forzar la eliminacion de una rama usamos el comando `git branch -D rama` destacar que la de es mayuscula , este comando tiene el riesgo de borrar cambios que no hallamos incluido en la rama principal
+
 
 
