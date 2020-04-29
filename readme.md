@@ -260,3 +260,32 @@ para ver esa rama  oculta `git branch --all`
 
 de nuevo si hago cambios y los confirmo con commits y veo el `git status` me muestra una linea informando que hay commits que no estan el la rama origin/master por lo tanto no estan actualizados con el repositorio en la nube 
 
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+este seria el mensaje , que estamos por delante de la rama origin/master por el numero de commit y que hagamos un git push para publicar nuestros commits locales 
+
+### traer cambios de github al repositorio local
+
+si quiero traer un repositorio de otra persona desde github hago un fork 
+al hacer un fork es como si estuviese haciendo una rama del repositorio de esa persona, que va a estar en nuestro repositorio en la nube o sea creo un repositorio propio de ese proyecto 
+luego puedo trabajar en el proyecto en linea en la web de github o puedo traer ese repositorio de la nube a un directorio de trabajo local al hacer un `git clone <urlDelRepositorio>` ,
+esto crea un directorio de trabajo con el repositorio iniciado 
+se clona el estado actual de ese repositorio en su rama principal  y su historia.  NO traemos las otras ramas que tenga esa otra persona 
+ 
+verificamos que estemos vinculados al repositorio con 
+`git config --local --list` el remote.origin.url=dirección-del-repo 
+el usuario y correo con `git config --global --list`
+el user.name y user.email=correoCuentaGithub
+desde este punto podemos modificar los archivos como veniamos trabajando haciendo adds y commits podemos crear ramas ya el repo es nuestro 
+
+al crear otra rama y hacer commits usamos <git push origin rama> y en el repositorio de github se creara la rama donde estamos trabajando y se subira con los cambios del ultimo comit,  estaran sincronizadas tanto en local como remoto 
+
+de nuevo para crear un repositorio en github a partir de un directorio de trabajo local en github usamos la opción nuevoRepositorio y generamos la <url del repositorio de github> 
+
+luego en consola ubicados en el directorio del repositorio local viculamos al remoto 
+{git remote add origin <url del repositorio de github> }
+en este punto estan vinculados pero NO sincronizados, pues para sincronizarlo necesitamos hacer un 
+`git push -u origin master` y se enviaran los archivos locales a el repositorio en la nube , despues de eso el remoto sera el mismo que el local, puedo seguir modificando los archivos locales y se sincronizaran cada vez que haga un push 
+
+
