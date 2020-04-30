@@ -302,3 +302,4 @@ git config user.email "mail" --global
 si no cambian en windows hay que eliminar las credenciales en <panel de control \ todos los elementos del panel de control \ administrador de credenciales > elijo las credenciales de windows y busco las de las cuentas relacionadas con git y las quito
 
 luego de esto vuelvo a configurar el user.name y user.email y me saltara una ventana de confirmacion para la contraseña de github, la ingreso y ya estara vinculada y podre hacer el <git push origin ramaNueva> y los cambios que relice estan en esa rama del repositorio remoto 
+cambio 1 
