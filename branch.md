@@ -1,12 +1,12 @@
 este combio esta en la rama2 branch 1
 <<<<<<< HEAD
 <<<<<<< HEAD
-este cambio esta hecho desde master 
+este cambio esta hecho desde master
 
 
 
 <<<<<<< HEAD
-este es el segundo de master 
+este es el segundo de master
 =======
 este cambio esta en ramacon2
 
@@ -16,7 +16,7 @@ ramacon2
 otro cambio en ramacon2
 
 
-este cambio esta desde la rama hola 
+este cambio esta desde la rama hola
 >>>>>>> hola
 =======
 
