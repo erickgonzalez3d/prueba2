@@ -304,3 +304,4 @@ si no cambian en windows hay que eliminar las credenciales en <panel de control 
 luego de esto vuelvo a configurar el user.name y user.email y me saltara una ventana de confirmacion para la contraseña de github, la ingreso y ya estara vinculada y podre hacer el <git push origin ramaNueva> y los cambios que relice estan en esa rama del repositorio remoto 
 cambio 1 
 cambio 2 
+cambio 3  
