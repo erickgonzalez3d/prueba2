@@ -279,7 +279,7 @@ el usuario y correo con `git config --global --list`
 el user.name y user.email=correoCuentaGithub
 desde este punto podemos modificar los archivos como veniamos trabajando haciendo adds y commits podemos crear ramas ya el repo es nuestro 
 
-al crear otra rama y hacer commits usamos <git push origin rama> y en el repositorio de github se creara la rama donde estamos trabajando y se subira con los cambios del ultimo comit,  estaran sincronizadas tanto en local como remoto 
+al crear otra rama y hacer commits usamos <git push origin rama> y en el repositorio de github se creara la rama donde estamos trabajando y se subira con los cambios del ultimo comit,  estaran sincronizadas tanto en local como remoto...... de ocurrir un erro lo mas probable es que el usuario de github no sea el que tengamos comfigurado en el repositorio local 
 
 de nuevo para crear un repositorio en github a partir de un directorio de trabajo local en github usamos la opción nuevoRepositorio y generamos la <url del repositorio de github> 
 
@@ -288,4 +288,14 @@ luego en consola ubicados en el directorio del repositorio local viculamos al re
 en este punto estan vinculados pero NO sincronizados, pues para sincronizarlo necesitamos hacer un 
 `git push -u origin master` y se enviaran los archivos locales a el repositorio en la nube , despues de eso el remoto sera el mismo que el local, puedo seguir modificando los archivos locales y se sincronizaran cada vez que haga un push 
 
+## realizar aportes 
+para aportar debo hacer un fork del proyecto original, clonarlo localmente y crear una rama para trabajar en ella.
+al hacer un push de nuevo `git push origin ramaNueva` 
 
+cuando hago este push puede que me salte el error de que no tengo acceso desde el usuario actual ,
+verifico el user.name y el user.email sean la misma cuenta del repositorio que estoy usando en github con 
+git config --global -l 
+git config --local -l 
+y los cambio con 
+git config user.name "usuario" --global 
+git config user.email "mail" --global 
