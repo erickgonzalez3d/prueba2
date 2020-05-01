@@ -292,7 +292,7 @@ en este punto estan vinculados pero NO sincronizados, pues para sincronizarlo ne
 para aportar debo hacer un fork del proyecto original, clonarlo localmente y crear una rama para trabajar en ella.
 al hacer un push de nuevo `git push origin ramaNueva` 
 
-luego de esto verifico el user.name y user.email y me saltara una ventana de confirmacion para la contraseña de github, la ingreso y ya estara vinculada y podre hacer el <git push origin ramaNueva> y los cambios que relice estan en esa rama del repositorio remoto 
+luego de esto verifico el user.name y user.email si no lo tengo configurado me saltara una ventana de confirmacion para la contraseña de github, la ingreso y ya estara vinculada y podre hacer el <git push origin ramaNueva> y los cambios que relice estan en esa rama del repositorio remoto 
 
 cuando hago este push puede que me salte el error de que no tengo acceso desde el usuario actual ,
 verifico el user.name y el user.email sean la misma cuenta del repositorio que estoy usando en github con 
@@ -302,7 +302,9 @@ y los cambio con
 git config user.name "usuario" --global 
 git config user.email "mail" --global 
 
-## Configurar dos usuarios en windows 
+si esto no funciona puedo configurar dos usuarios eliminando las credenciales y configurando los usuarios por repositorios 
+
+## Configurar usuarios en windows 
 
  hay que eliminar las credenciales en <panel de control \ todos los elementos del panel de control \ administrador de credenciales > elijo las credenciales de windows y busco las de las cuentas relacionadas con git y las quito 
 
@@ -315,6 +317,15 @@ elimino la etiqueta de [user] con sus valores y coloco la siguiente:
  
 esto hara que cada vez que enviemos un push pida el usuario y la contraseña,  porque no dejara guardar en cache la credencial de github  
 
-nuevo   
+esto hara que cada vez que enviemos un push pida el usuario y la contraseña,  porque no dejara guardar en cache la credencial de github
+
+ahora puedo hacer push desde repositorios distintos con diferentes usuarios
+
+= para trabajar desde una maquina con un solo usuario puedo eliminar la anterior configuración 
+
+### pull request 
+luego de crear una rama en un repositorio clonado y realizar los cambios a los archivos puedo aportarlos a otra persona con un pull request desde la rama actual a la rama de la persona a la cual vamos a colaborar 
+luego tendremos que esperar a que la persona nos acepte o rechace el pull request 
+
 
 
