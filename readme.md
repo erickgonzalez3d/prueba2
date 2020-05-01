@@ -327,5 +327,23 @@ ahora puedo hacer push desde repositorios distintos con diferentes usuarios
 luego de crear una rama en un repositorio clonado y realizar los cambios a los archivos puedo aportarlos a otra persona con un pull request desde la rama actual a la rama de la persona a la cual vamos a colaborar 
 luego tendremos que esperar a que la persona nos acepte o rechace el pull request 
 
+en github la interfaz muestra los botones para el pull request y la elección de las ramas  
+
+despues de realizar el pull request llega un mensaje a el correo de editor original con el enlace de pull para ver las diferencias aguegadas 
+el programador original puede aceptar el pull y hacer merge de los cambios 
+en el historial de commits se veran los commits de las personas que colaboraron  
+cuando el editor original acepta los cambios llega un correo al editor colaborador 
+se debe activar la opcion watching en github para que lleguen los correos 
+
+
+# pasos para los aportes 
+1- Hacer un fork de algun repositorio 
+2- clonar el repositorio desde la url de mi cuenta de github
+3- Crear una rama local 
+4- Empezar el desarrollo y hacer los cambios al proyecto
+5- Hacer commits de los cambios locales 
+6- hacer un `git push origin ramaDesarrollo` (enviar los commit locales a la nube)
+7- crear un pull request hacia la rama a colaborar de editor original 
+
 
 
