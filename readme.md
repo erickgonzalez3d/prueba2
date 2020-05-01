@@ -1,4 +1,4 @@
-## curso git desde 0
+# curso git desde 0
 flujo de trabajo en git
 primero creamos y elegimos un directorio TRABAJOprincipal
 lo podemos hacer manualmente o desde la terminal de git con el comando mkdir TRABAJOprincipal
@@ -153,6 +153,9 @@ para crear una etiqueta en un punto de la historia que no sea el HEAD uso el com
 
 Puedo filtrar las etiqueta en comun como por ejemplo las versione v1, v1.2, v1.3.... agregando el parametro -l o --list al comando de esta forma `git tag -l "v1.*"` y me listara los tag que empiezan por v1. 
 
+asi como borro las ramas tambien puedo borrar las etiquetas con el comando `git tag -d nomEtiqueta` 
+
+y al igual que las ramas cuando se borra lo que eliminamos es el apuntador del commit pero no borramos el commit en si ya que este hace parte del historial de modificación 
 
    
 # ramas
@@ -163,3 +166,126 @@ este apuntador o rama es movil se desplaza al ultimo commit
 
 varia ramas o branches pueden estar apuntando a un mismo commit o punto en el tiempo
 para ver la especificación tecnica usamos `git branch --help` 
+
+con el comando `git branch` se listan las ramas que hay en el repositorio 
+
+para crear una rama usamos el comando `git branch + nombreRama` desde cualquier rama donde estemos
+
+para movernos entre los branch usamos el comando `git checkout nobreRama` cuando ejecutamos este comando el apuntador del `git log indicara la rama donde este asi HEAD -> rama, debemos tener en cuenta que cuando se crea el branch no se modifica la posición del head, solo hasta ejecutar el checkout
+
+el directorio de trabajo debe estar limpio cuando cambiemos de rama o podriamos perder los cambios que aun no esten añadidos
+
+podemos estar en un commit al que esten apuntando varias ramas  pero el HEAD  indicara a cual esta afectando los commits que hagamos  
+
+al cambiar de branch y empezar a generar commits el HEAD va a continuar por el camino de ese branch dejando atras en el tiempo la rama desde la cual fue creada la actual 
+
+las ramas  apuntan al commit del momento en que creamos la rama y de hay en adelante al ultimo commit de la misma 
+
+si me devuelvo en el historial desde una rama alterna a un commit anterior del cual inicio esa rama no estare en esa rama 
+
+no hay un limite en la cantidad de ramas a crear 
+
+la rama master esta por defecto pero si se sigue deserrollando a lo largo de una rama esa podria ser la rama principal <cualquier rama puede ser la principal> 
+
+
+tambien puedo generar commit en las distintas ramas y estas tomaran su propio camino 
+
+puedo ver las ramas oculta con git branch --all y me mostrara la ramas que hay tanto el local como en linea 
+
+# fusion de ramas 
+   
+       
+
+para fusionar ramas se usa el comando `git merge`
+
+primero verificamos en que rama estamos ubicados con el HEAD `git status` o con `git branch` este ultimo lo mostrara marcado y si usamos el `git branch -v` muestra el ultimo commit que hay en cada rama 
+
+no necesariamente tenemos que fusionar la rama con la mas cercana podemos hacerlo con cualquier otra 
+
+primero tenemos que ubicarnos en la RAMA DESTINO y ejecutamos el comando git merge <rama a fusionar> 
+
+
+
+
+` git push --set-upstream origin ramacon` este comando configura la rama actual como la que va a hacer los push al repositorio remoto 
+
+cuando fusionamos una rama y tiene conflictos con la actual debemos arreglar esos conflictos o añadirlos automaticamente y luego hacer un commit que confirme ese merge, en el apuntador del HEAD se mostrara el mensaje  <rama|MERGING> que indica que se esta haciendo  la corrección para el completar el merge con un commit, esto pasa cuando en dos ramas modificamos las mismas lineas de los archivos git mostrara un menseje asi en esas lineas de los archivos en conflicto 
+
+>>>>>>>>>>  HEAD Aca estaran las modificaciones en la rama actual
+estan en el mismo numero de linea que en la otra rama 
+=========
+cambios en la otra rama en las mismas lineas  
+puedo borrar algunas lineas de cada rama o quedarme con todas y borro los simbolos de git 
+>>>>
+=====
+<<<<<< 
+
+<<<<<<<<< (rama que le estoy haciendo merge)
+
+para borrar una rama o branch uso el comando `git branch -d <nombre de la rama>`, si la rama no ha sido fusionada git no dejara eliminarla con este comando hasta que se fusionen los cambios  
+
+para forzar la eliminacion de una rama usamos el comando `git branch -D rama` destacar que la de es mayuscula , este comando tiene el riesgo de borrar cambios que no hallamos incluido en la rama principal
+
+el comando `git branch --no-merge` me indica cual rama no ha sido fusionada a la rama actual y si es un cambio que deseo eliminar y no fusionar con el proyecto puedo eliminarla con branch -D 
+
+el comando `git branch --merge` me muestra las ramas que esta fusionadas con la actual 
+
+si quiero ver los cambios que tiene otra rama con respecto a la actual utilizo el comando `git show otraRama` me mostrara un equivalente al `git diff` pero este aplicado a ramas 
+
+#### volver a un rama eliminada
+
+si elimino una rama y quiero volver a trabajar en ella , puedo ir al ultimo commit que hubo en esa rama con un `git checkout <numCommit> `y crear un rama
+indicandole que vamos a saltar a ella desde la actual con el comando `git checkout -b (nomRamarestaurada)`, despues de ejecutar este comando el  HEAD va a estar ubicado en la rama restaurada, desde hay puede seguir el desarrollo de la restaurada y volver a la rama master cuando quiera 
+
+# github 
+
+es una red social para compartir codigo, corregirlo o colaborar con otros proyectos atravez de repositorios 
+
+git remote add origin <url repositorio> nos conecta a el repositorio con esa url  y lo sincronizamos con nuestro repositorio local con `git push -u origin master` 
+
+si git no deja hacer un push a repositorio web podemos intentar cambiando el email y usuario por el de la cuenta en github, lo podemos ver con `git config --global --list` y si observo el local `git config --local --list` vemos la configuración de ese repositorio en especifico y debe tener una linea que indique el repositorio al que esta enlazado  
+
+ remote.origin.url=https://github.com/ErickGonzalez3d/prueba2.git 
+
+SI NO estan conectados configuramos de nuevo el correo y el usuario de git con 
+`git config user.email "email" --global`  
+`git config user.name "nombre" --global`
+
+luego de esto probamos hacer un `git push -u origin` y  ya deberian sincronizarse el repositorio local y el de la nube de github
+
+al estar sincronizados puedo subir archivos en el desde el directorio de trabajo y el consola debe aparecer un mensaje en una nueva linea de `git status` indicando que esta actualizado con origin/master 
+
+despues de sincronizados se crea la rama "oculta" origin/master, esta sera la rama de el repositorio que no se mostrara en el git branch 
+para ver esa rama  oculta `git branch --all` 
+
+de nuevo si hago cambios y los confirmo con commits y veo el `git status` me muestra una linea informando que hay commits que no estan el la rama origin/master por lo tanto no estan actualizados con el repositorio en la nube 
+
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+este seria el mensaje , que estamos por delante de la rama origin/master por el numero de commit y que hagamos un git push para publicar nuestros commits locales 
+
+### traer cambios de github al repositorio local
+
+si quiero traer un repositorio de otra persona desde github hago un fork 
+al hacer un fork es como si estuviese haciendo una rama del repositorio de esa persona, que va a estar en nuestro repositorio en la nube o sea creo un repositorio propio de ese proyecto 
+luego puedo trabajar en el proyecto en linea en la web de github o puedo traer ese repositorio de la nube a un directorio de trabajo local al hacer un `git clone <urlDelRepositorio>` ,
+esto crea un directorio de trabajo con el repositorio iniciado 
+se clona el estado actual de ese repositorio en su rama principal  y su historia.  NO traemos las otras ramas que tenga esa otra persona 
+ 
+verificamos que estemos vinculados al repositorio con 
+`git config --local --list` el remote.origin.url=dirección-del-repo 
+el usuario y correo con `git config --global --list`
+el user.name y user.email=correoCuentaGithub
+desde este punto podemos modificar los archivos como veniamos trabajando haciendo adds y commits podemos crear ramas ya el repo es nuestro 
+
+al crear otra rama y hacer commits usamos <git push origin rama> y en el repositorio de github se creara la rama donde estamos trabajando y se subira con los cambios del ultimo comit,  estaran sincronizadas tanto en local como remoto 
+
+de nuevo para crear un repositorio en github a partir de un directorio de trabajo local en github usamos la opción nuevoRepositorio y generamos la <url del repositorio de github> 
+
+luego en consola ubicados en el directorio del repositorio local viculamos al remoto 
+{git remote add origin <url del repositorio de github> }
+en este punto estan vinculados pero NO sincronizados, pues para sincronizarlo necesitamos hacer un 
+`git push -u origin master` y se enviaran los archivos locales a el repositorio en la nube , despues de eso el remoto sera el mismo que el local, puedo seguir modificando los archivos locales y se sincronizaran cada vez que haga un push 
+
+
