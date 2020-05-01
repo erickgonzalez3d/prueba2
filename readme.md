@@ -292,6 +292,8 @@ en este punto estan vinculados pero NO sincronizados, pues para sincronizarlo ne
 para aportar debo hacer un fork del proyecto original, clonarlo localmente y crear una rama para trabajar en ella.
 al hacer un push de nuevo `git push origin ramaNueva` 
 
+luego de esto verifico el user.name y user.email y me saltara una ventana de confirmacion para la contraseña de github, la ingreso y ya estara vinculada y podre hacer el <git push origin ramaNueva> y los cambios que relice estan en esa rama del repositorio remoto 
+
 cuando hago este push puede que me salte el error de que no tengo acceso desde el usuario actual ,
 verifico el user.name y el user.email sean la misma cuenta del repositorio que estoy usando en github con 
 git config --global -l 
@@ -299,9 +301,18 @@ git config --local -l
 y los cambio con 
 git config user.name "usuario" --global 
 git config user.email "mail" --global 
-si no cambian en windows hay que eliminar las credenciales en <panel de control \ todos los elementos del panel de control \ administrador de credenciales > elijo las credenciales de windows y busco las de las cuentas relacionadas con git y las quito
 
-luego de esto vuelvo a configurar el user.name y user.email y me saltara una ventana de confirmacion para la contraseña de github, la ingreso y ya estara vinculada y podre hacer el <git push origin ramaNueva> y los cambios que relice estan en esa rama del repositorio remoto 
-cambio 1 
-cambio 2 
-cambio 3  
+## Configurar dos usuarios en windows 
+
+ hay que eliminar las credenciales en <panel de control \ todos los elementos del panel de control \ administrador de credenciales > elijo las credenciales de windows y busco las de las cuentas relacionadas con git y las quito 
+
+luego en cada repositorio cambio la configuración local con el comando `git config --local --edit 
+
+elimino la etiqueta de [user] con sus valores y coloco la siguiente: 
+
+[credential]
+ interactive = always 
+ 
+esto hara que cada vez que enviemos un push pida el usuario y la contraseña,  porque no dejara guardar en cache la credencial de github  
+
+
