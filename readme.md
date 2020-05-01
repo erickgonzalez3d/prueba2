@@ -315,4 +315,6 @@ elimino la etiqueta de [user] con sus valores y coloco la siguiente:
  
 esto hara que cada vez que enviemos un push pida el usuario y la contraseña,  porque no dejara guardar en cache la credencial de github  
 
+nuevo   
+
 
