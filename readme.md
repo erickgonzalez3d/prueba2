@@ -347,6 +347,9 @@ se debe activar la opcion watching en github para que lleguen los correos
 8. esperar a que el dueño de la otra cuenta nos acepte el cambio
 
 
+# git fetch 
+
+
 
 
 
