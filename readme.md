@@ -211,16 +211,16 @@ primero tenemos que ubicarnos en la RAMA DESTINO y ejecutamos el comando git mer
 
 cuando fusionamos una rama y tiene conflictos con la actual debemos arreglar esos conflictos o añadirlos automaticamente y luego hacer un commit que confirme ese merge, en el apuntador del HEAD se mostrara el mensaje  <rama|MERGING> que indica que se esta haciendo  la corrección para el completar el merge con un commit, esto pasa cuando en dos ramas modificamos las mismas lineas de los archivos git mostrara un menseje asi en esas lineas de los archivos en conflicto
 
->>>>>>>>>>  HEAD Aca estaran las modificaciones en la rama actual
+(>>>->>>->>>> ) HEAD Aca estaran las modificaciones en la rama actual
 estan en el mismo numero de linea que en la otra rama
-=========
+(=========)
 cambios en la otra rama en las mismas lineas  
 puedo borrar algunas lineas de cada rama o quedarme con todas y borro los simbolos de git
->>>>
-=====
-<<<<<<
+(->>>>)
+-(-=====)
+-(<-<<<<<)
 
-<<<<<<<<< (rama que le estoy haciendo merge)
+  -1(<<<) (rama que le estoy haciendo merge)
 
 para borrar una rama o branch uso el comando `git branch -d <nombre de la rama>`, si la rama no ha sido fusionada git no dejara eliminarla con este comando hasta que se fusionen los cambios  
 
@@ -279,15 +279,83 @@ el usuario y correo con `git config --global --list`
 el user.name y user.email=correoCuentaGithub
 desde este punto podemos modificar los archivos como veniamos trabajando haciendo adds y commits podemos crear ramas ya el repo es nuestro
 
-al crear otra rama y hacer commits usamos <git push origin rama> y en el repositorio de github se creara la rama donde estamos trabajando y se subira con los cambios del ultimo comit,  estaran sincronizadas tanto en local como remoto
+
+al crear otra rama y hacer commits usamos <git push origin rama> y en el repositorio de github se creara la rama donde estamos trabajando y se subira con los cambios del ultimo comit,  estaran sincronizadas tanto en local como remoto...... de ocurrir un erro lo mas probable es que el usuario de github no sea el que tengamos comfigurado en el repositorio local 
+
 
 de nuevo para crear un repositorio en github a partir de un directorio de trabajo local en github usamos la opción nuevoRepositorio y generamos la <url del repositorio de github>
 
-<<<<<<< HEAD
+
 cambio prueba 
-=======
+
 luego en consola ubicados en el directorio del repositorio local viculamos al remoto
 {git remote add origin <url del repositorio de github> }
-en este punto estan vinculados pero NO sincronizados, pues para sincronizarlo necesitamos hacer un
-`git push -u origin master` y se enviaran los archivos locales a el repositorio en la nube , despues de eso el remoto sera el mismo que el local, puedo seguir modificando los archivos locales y se sincronizaran cada vez que haga un push
->>>>>>> af76fb0316a7c5edac677ad82ffa611fece009d9
+
+en este punto estan vinculados pero NO sincronizados, pues para sincronizarlo necesitamos hacer un 
+`git push -u origin master` y se enviaran los archivos locales a el repositorio en la nube , despues de eso el remoto sera el mismo que el local, puedo seguir modificando los archivos locales y se sincronizaran cada vez que haga un push 
+
+## realizar aportes 
+para aportar debo hacer un fork del proyecto original, clonarlo localmente y crear una rama para trabajar en ella.
+al hacer un push de nuevo `git push origin ramaNueva` 
+
+luego de esto verifico el user.name y user.email si no lo tengo configurado me saltara una ventana de confirmacion para la contraseña de github, la ingreso y ya estara vinculada y podre hacer el <git push origin ramaNueva> y los cambios que relice estan en esa rama del repositorio remoto 
+
+cuando hago este push puede que me salte el error de que no tengo acceso desde el usuario actual ,
+verifico el user.name y el user.email sean la misma cuenta del repositorio que estoy usando en github con 
+git config --global -l 
+git config --local -l 
+y los cambio con 
+git config user.name "usuario" --global 
+git config user.email "mail" --global 
+
+si esto no funciona puedo configurar dos usuarios eliminando las credenciales y configurando los usuarios por repositorios 
+
+## Configurar usuarios en windows 
+
+ hay que eliminar las credenciales en <panel de control \ todos los elementos del panel de control \ administrador de credenciales > elijo las credenciales de windows y busco las de las cuentas relacionadas con git y las quito 
+
+luego en cada repositorio cambio la configuración local con el comando `git config --local --edit 
+
+elimino la etiqueta de [user] con sus valores y coloco la siguiente: 
+
+[credential]
+ interactive = always 
+ 
+esto hara que cada vez que enviemos un push pida el usuario y la contraseña,  porque no dejara guardar en cache la credencial de github  
+
+esto hara que cada vez que enviemos un push pida el usuario y la contraseña,  porque no dejara guardar en cache la credencial de github
+
+ahora puedo hacer push desde repositorios distintos con diferentes usuarios
+
+= para trabajar desde una maquina con un solo usuario puedo eliminar la anterior configuración 
+
+### pull request 
+luego de crear una rama en un repositorio clonado y realizar los cambios a los archivos puedo aportarlos a otra persona con un pull request desde la rama actual a la rama de la persona a la cual vamos a colaborar 
+luego tendremos que esperar a que la persona nos acepte o rechace el pull request 
+
+en github la interfaz muestra los botones para el pull request y la elección de las ramas  
+
+despues de realizar el pull request llega un mensaje a el correo de editor original con el enlace de pull para ver las diferencias aguegadas 
+el programador original puede aceptar el pull y hacer merge de los cambios 
+en el historial de commits se veran los commits de las personas que colaboraron  
+cuando el editor original acepta los cambios llega un correo al editor colaborador 
+se debe activar la opcion watching en github para que lleguen los correos 
+
+
+# pasos para los aportes 
+1. Hacer un fork de algun repositorio 
+2. clonar el repositorio desde la url de mi cuenta de github
+3. Crear una rama local 
+4. Empezar el desarrollo y hacer los cambios al proyecto
+5. Hacer commits de los cambios locales 
+6. hacer un `git push origin ramaDesarrollo` (enviar los commit locales a la nube)
+7. crear un pull request hacia la rama a colaborar de editor original 
+8. esperar a que el dueño de la otra cuenta nos acepte el cambio
+
+## aceptar el merge del pullrequest
+ al aceptar el merge del pull request estoy aceptando los cambios en el tiempo que hizo el colaborador y por lo tanto El HEAD de mi rama esta por detras de todos esos cambios, y por ende si hago un cambio en mi directorio local y quiero enviarlo con push me notificara el error , porque estoy mandando un cambio a una rama que no esta sincronizada, para resolverlo debo hacer un `git pull` desde el directorio local, 
+# git fetch 
+
+
+
+
