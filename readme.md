@@ -344,6 +344,9 @@ se debe activar la opcion watching en github para que lleguen los correos
 5. Hacer commits de los cambios locales 
 6. hacer un `git push origin ramaDesarrollo` (enviar los commit locales a la nube)
 7. crear un pull request hacia la rama a colaborar de editor original 
+8. esperar a que el dueño de la otra cuenta nos acepte el cambio
+
+
 
 
 
