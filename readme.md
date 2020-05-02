@@ -346,7 +346,8 @@ se debe activar la opcion watching en github para que lleguen los correos
 7. crear un pull request hacia la rama a colaborar de editor original 
 8. esperar a que el dueño de la otra cuenta nos acepte el cambio
 
-
+## aceptar el merge del pullrequest
+ al aceptar el merge del pull request estoy aceptando los cambios en el tiempo que hizo el colaborador y por lo tanto El HEAD de mi rama esta por detras de todos esos cambios, y por ende si hago un cambio en mi directorio local y quiero enviarlo con push me notificara el error , porque estoy mandando un cambio a una rama que no esta sincronizada, para resolverlo debo hacer un `git pull` desde el directorio local, 
 # git fetch 
 
 
