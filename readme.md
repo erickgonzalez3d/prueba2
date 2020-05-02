@@ -337,13 +337,13 @@ se debe activar la opcion watching en github para que lleguen los correos
 
 
 # pasos para los aportes 
-1- Hacer un fork de algun repositorio 
-2- clonar el repositorio desde la url de mi cuenta de github
-3- Crear una rama local 
-4- Empezar el desarrollo y hacer los cambios al proyecto
-5- Hacer commits de los cambios locales 
-6- hacer un `git push origin ramaDesarrollo` (enviar los commit locales a la nube)
-7- crear un pull request hacia la rama a colaborar de editor original 
+1. Hacer un fork de algun repositorio 
+2. clonar el repositorio desde la url de mi cuenta de github
+3. Crear una rama local 
+4. Empezar el desarrollo y hacer los cambios al proyecto
+5. Hacer commits de los cambios locales 
+6. hacer un `git push origin ramaDesarrollo` (enviar los commit locales a la nube)
+7. crear un pull request hacia la rama a colaborar de editor original 
 
 
 
