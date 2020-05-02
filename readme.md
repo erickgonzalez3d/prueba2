@@ -220,7 +220,7 @@ puedo borrar algunas lineas de cada rama o quedarme con todas y borro los simbol
 =====
 <<<<<< 
 
-<<<<<<<<< (rama que le estoy haciendo merge)
+  -1(<<<) (rama que le estoy haciendo merge)
 
 para borrar una rama o branch uso el comando `git branch -d <nombre de la rama>`, si la rama no ha sido fusionada git no dejara eliminarla con este comando hasta que se fusionen los cambios  
 
