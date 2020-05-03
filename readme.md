@@ -228,6 +228,7 @@ para borrar una rama o branch uso el comando `git branch -d <nombre de la rama>`
 
 para forzar la eliminacion de una rama usamos el comando `git branch -D rama` destacar que la de es mayuscula , este comando tiene el riesgo de borrar cambios que no hallamos incluido en la rama principal
 
+
 el comando `git branch --no-merge` me indica cual rama no ha sido fusionada a la rama actual y si es un cambio que deseo eliminar y no fusionar con el proyecto puedo eliminarla con branch -D
 
 el comando `git branch --merge` me muestra las ramas que esta fusionadas con la actual
@@ -392,6 +393,9 @@ en el protocolo https github va a pedir el usuario y la contraseña siempre
 
 cuando voy a borrar una rama de repositorio remoto tengo que borrarla primero el local, si esta no esta fusionada me salta un error para que la fusionemos, podemos fusionarla a la rama de desarrollo pero si no queremos hacerlo aun se puede  crear otra rama separada y hacer un merge desde esa, luego puedo borrarla y hacer un `git push 
 
-      
+    
+para saber cual rama no hemos fusionado usamos el comando `git branch --no--merge`
+
+
 
 
