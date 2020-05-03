@@ -354,8 +354,13 @@ se debe activar la opcion watching en github para que lleguen los correos
 
 ## aceptar el merge del pullrequest
  al aceptar el merge del pull request estoy aceptando los cambios en el tiempo que hizo el colaborador y por lo tanto El HEAD de mi rama esta por detras de todos esos cambios, y por ende si hago un cambio en mi directorio local y quiero enviarlo con push me notificara el error , porque estoy mandando un cambio a una rama que no esta sincronizada, para resolverlo debo hacer un `git pull` desde el directorio local, 
-# git fetch 
+## sincronización cuando hice merge de un pull request  
+despues de hacer un merge de una rama en el repositorio remoto de un pull request, esa rama adquiere los commits del coloborador,  esos combios no estan en el directorio local y ademas estan por delante del commit del HEAD local que era el que estaba sincronizado con el remoto.
+para sincronizarlos de nuevo debo traer esos cambios del remoto al local para poder seguir desarrollando,
+porque si no git no me dejara hacer push hacia la rama remota, para eso se usa un git fetch
+
+##  
 
 
-
-
+##### Nota para adjuntar 
+cuando sincronizo un directorio local con uno el la nube solo se suben las ramas a las que les haga un `git push origin NomRama`
