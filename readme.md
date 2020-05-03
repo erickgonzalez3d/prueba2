@@ -298,6 +298,7 @@ cambio prueba
 luego en consola ubicados en el directorio del repositorio local viculamos al remoto
 {git remote add origin <url del repositorio de github> }
 
+
 en este punto estan vinculados pero NO sincronizados, pues para sincronizarlo necesitamos hacer un 
 `git push -u origin master` y se enviaran los archivos locales a el repositorio en la nube , despues de eso el remoto sera el mismo que el local, puedo seguir modificando los archivos locales y se sincronizaran cada vez que haga un push 
 
