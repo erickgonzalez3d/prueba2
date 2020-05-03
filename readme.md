@@ -396,8 +396,13 @@ cuando voy a borrar una rama de repositorio remoto tengo que borrarla primero el
 
 ### `git push origin --delete rama`
 elimina la rama del repositorio remoto 
-    
-para saber cual rama no hemos fusionado usamos el comando `git branch --no--merge`
+
+### `git branch -d rama`
+elimina la rama local 
+
+
+###  `git branch --no--merge`
+para saber cual rama no hemos fusionado usamos el comando `git branch --no--merge` u listara solo las que estan con desarrollos independientes a la principal 
 
 
 
