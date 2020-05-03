@@ -202,6 +202,8 @@ primero verificamos en que rama estamos ubicados con el HEAD `git status` o con 
 
 no necesariamente tenemos que fusionar la rama con la mas cercana podemos hacerlo con cualquier otra
 
+### git merge 
+
 primero tenemos que ubicarnos en la RAMA DESTINO y ejecutamos el comando git merge <rama a fusionar>
 
 
@@ -310,6 +312,8 @@ git config user.email "mail" --global
 
 si esto no funciona puedo configurar dos usuarios eliminando las credenciales y configurando los usuarios por repositorios 
 
+para realizar el aporte en github me situo en la rama que desarrolle y hago un pull request hacia la rama del editor original 
+
 ## Configurar usuarios en windows 
 
  hay que eliminar las credenciales en <panel de control \ todos los elementos del panel de control \ administrador de credenciales > elijo las credenciales de windows y busco las de las cuentas relacionadas con git y las quito 
@@ -337,7 +341,7 @@ en github la interfaz muestra los botones para el pull request y la elección de
 
 despues de realizar el pull request llega un mensaje a el correo de editor original con el enlace de pull para ver las diferencias aguegadas 
 el programador original puede aceptar el pull y hacer merge de los cambios 
-en el historial de commits se veran los commits de las personas que colaboraron  
+en el historial de commits se veran los commits de las personas que colaboraron.   
 cuando el editor original acepta los cambios llega un correo al editor colaborador 
 se debe activar la opcion watching en github para que lleguen los correos 
 
@@ -345,22 +349,25 @@ se debe activar la opcion watching en github para que lleguen los correos
 # pasos para los aportes 
 1. Hacer un fork de algun repositorio 
 2. clonar el repositorio desde la url de mi cuenta de github
-3. Crear una rama local 
+3. Crear una segunda rama local 
 4. Empezar el desarrollo y hacer los cambios al proyecto
 5. Hacer commits de los cambios locales 
 6. hacer un `git push origin ramaDesarrollo` (enviar los commit locales a la nube)
 7. crear un pull request hacia la rama a colaborar de editor original 
 8. esperar a que el dueño de la otra cuenta nos acepte el cambio
 
-## aceptar el merge del pullrequest
- al aceptar el merge del pull request estoy aceptando los cambios en el tiempo que hizo el colaborador y por lo tanto El HEAD de mi rama esta por detras de todos esos cambios, y por ende si hago un cambio en mi directorio local y quiero enviarlo con push me notificara el error , porque estoy mandando un cambio a una rama que no esta sincronizada, para resolverlo debo hacer un `git pull` desde el directorio local, 
+## sincronización cuando hice merge de un pull request  en remoto 
+ al aceptar el merge del pull request estoy aceptando los cambios en el tiempo que hizo el colaborador y por lo tanto El HEAD de mi rama esta por detras de todos esos cambios, y por ende si hago un cambio en mi directorio local y quiero enviarlo con push me notificara el error , porque estoy mandando un cambio a una rama que no esta sincronizada, para resolverlo debo hacer un `git fetch para traer los cambios remotos del colaborador que estan en mi rama a una rama escondida en mi directorio local  y luego hacer un git merge desde la rama que estoy, de la que quiero adjuntar, o puedo hacer un git pull que es los dos pasos el fetch y el merge en uno solo 
+
 ## sincronización cuando hice merge de un pull request  
 despues de hacer un merge de una rama en el repositorio remoto de un pull request, esa rama adquiere los commits del coloborador,  esos combios no estan en el directorio local y ademas estan por delante del commit del HEAD local que era el que estaba sincronizado con el remoto.
 para sincronizarlos de nuevo debo traer esos cambios del remoto al local para poder seguir desarrollando,
 porque si no git no me dejara hacer push hacia la rama remota, para eso se usa un git fetch
 
-##  
+##  git fetch 
+Este comando traera los cambios de la rama en remoto y creara una rama escondida con los commits para que podamos verla y verificar cuales son los cambios antes de adjuntarla con un merge a la rama en la que estamos trabajando 
 
 
 ##### Nota para adjuntar 
 cuando sincronizo un directorio local con uno el la nube solo se suben las ramas a las que les haga un `git push origin NomRama`
+
