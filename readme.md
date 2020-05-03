@@ -234,6 +234,10 @@ el comando `git branch --merge` me muestra las ramas que esta fusionadas con la 
 
 si quiero ver los cambios que tiene otra rama con respecto a la actual utilizo el comando `git show otraRama` me mostrara un equivalente al `git diff` pero este aplicado a ramas
 
+### git branch --no-merged
+el comando me muestra en terminal la ramas que no estan fusionadas 
+
+
 #### volver a un rama eliminada
 
 si elimino una rama y quiero volver a trabajar en ella , puedo ir al ultimo commit que hubo en esa rama con un `git checkout <numCommit> `y crear un rama
@@ -356,18 +360,38 @@ se debe activar la opcion watching en github para que lleguen los correos
 7. crear un pull request hacia la rama a colaborar de editor original 
 8. esperar a que el dueño de la otra cuenta nos acepte el cambio
 
-## sincronización cuando hice merge de un pull request  en remoto 
+## sincronización cuando hice merge de un pull request  en remoto como editor original 
  al aceptar el merge del pull request estoy aceptando los cambios en el tiempo que hizo el colaborador y por lo tanto El HEAD de mi rama esta por detras de todos esos cambios, y por ende si hago un cambio en mi directorio local y quiero enviarlo con push me notificara el error , porque estoy mandando un cambio a una rama que no esta sincronizada, para resolverlo debo hacer un `git fetch para traer los cambios remotos del colaborador que estan en mi rama a una rama escondida en mi directorio local  y luego hacer un git merge desde la rama que estoy, de la que quiero adjuntar, o puedo hacer un git pull que es los dos pasos el fetch y el merge en uno solo 
 
 ## sincronización cuando hice merge de un pull request  
-despues de hacer un merge de una rama en el repositorio remoto de un pull request, esa rama adquiere los commits del coloborador,  esos combios no estan en el directorio local y ademas estan por delante del commit del HEAD local que era el que estaba sincronizado con el remoto.
+despues de hacer un merge de una rama en el repositorio remoto de un pull request, esa rama adquiere los commits del coloborador,  esos cambios no estan en el directorio local y ademas estan por delante del commit del HEAD local que era el que estaba sincronizado con el remoto.
 para sincronizarlos de nuevo debo traer esos cambios del remoto al local para poder seguir desarrollando,
 porque si no git no me dejara hacer push hacia la rama remota, para eso se usa un git fetch
 
 ##  git fetch 
-Este comando traera los cambios de la rama en remoto y creara una rama escondida con los commits para que podamos verla y verificar cuales son los cambios antes de adjuntarla con un merge a la rama en la que estamos trabajando 
+Este comando traera los cambios de la rama en remoto y creara una rama escondida con los commits para que podamos verla y verificar cuales son los cambios antes de adjuntarla con un`git merge` a la rama en la que estamos trabajando, hacemos el merge y ya estamos sincronizados otravez con el remoto y podemos hacer push 
+de nuestros cambios y el HEAD volvera a la punta de los commits .
+podemos hacerlo tambien con el `git pull` 
+
+## git pull 
+este comando es la union del git fetch y el git merge del paso enterior 
+
+## volver a sincronizar la rama del fork cuando el editor original hizo mas commits 
+
+obtener los cambios que se han echo en el repositorio original si nuestra rama no las tiene? 
+
+localmmente 
 
 
-##### Nota para adjuntar 
+##### Notas para adjuntar 
 cuando sincronizo un directorio local con uno el la nube solo se suben las ramas a las que les haga un `git push origin NomRama`
+ 
+en el protocolo https github va a pedir el usuario y la contraseña siempre 
+
+### borrar una rama remota sincronicamente desde local 
+
+cuando voy a borrar una rama de repositorio remoto tengo que borrarla primero el local, si esta no esta fusionada me salta un error para que la fusionemos, podemos fusionarla a la rama de desarrollo pero si no queremos hacerlo aun se puede  crear otra rama separada y hacer un merge desde esa, luego puedo borrarla y hacer un `git push 
+
+      
+
 
