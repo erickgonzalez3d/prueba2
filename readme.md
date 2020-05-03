@@ -394,6 +394,8 @@ en el protocolo https github va a pedir el usuario y la contraseña siempre
 
 cuando voy a borrar una rama de repositorio remoto tengo que borrarla primero el local, si esta no esta fusionada me salta un error para que la fusionemos, podemos fusionarla a la rama de desarrollo pero si no queremos hacerlo aun se puede  crear otra rama separada y hacer un merge desde esa, luego puedo borrarla  hacer un `git branch -d rama` hay estara borrada localmente para hacerlo remoto uso `git push origin --delete rama`
 
+### `git push origin --delete rama`
+elimina la rama del repositorio remoto 
     
 para saber cual rama no hemos fusionado usamos el comando `git branch --no--merge`
 
