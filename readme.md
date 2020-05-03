@@ -401,6 +401,9 @@ y luego hacer merge de la rama oculta que trae el fetch
 
 tambien puedo hacer un `git pull nombreRepo master`
 
+con eso nuestra rama ya tendra los ultimos cambios de la original 
+
+
 
 
 ##### Notas para adjuntar 
