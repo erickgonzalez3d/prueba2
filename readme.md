@@ -86,7 +86,8 @@ el git restore  saca la modificación o el archivo  nuevo del area de detección
 
 si ya lo agregue al area de preparación con <git add .> puedo sacarlo con {`git restore --staged`} y tambien funciona `{git reset HEAD |archivo|}`
 
-el git checkout quita los cambios que tenga el archivo en seguimiento pero se ya estan en la zona de preparación no los quita, se tendria que hacer un git `{restore --staged}` y despues el checkout
+el git checkout quita los cambios que tenga el archivo en seguimiento pero si ya estan en la zona de preparación no los quita, se tendria que hacer un git `{restore --staged}` y despues el checkout
+porque es como saltar a otra rama sin haber guardado, pero esta en commits 
 
 ## sincronizar un repositorio con github desde consola
 
@@ -382,7 +383,24 @@ este comando es la union del git fetch y el git merge del paso enterior
 
 obtener los cambios que se han echo en el repositorio original si nuestra rama no las tiene? 
 
-localmmente 
+debemos vincular el repositorio original  
+localmente podemos tener sincronizado el repositorio ajeno para hacer fetch y pull y ademas si somos parte de un equipo de trabajo se nos puede habilitar la opción de push 
+
+con `git remote` vemos el repositorio propio vinculado
+
+`git remote -v` igual a `git remote --verbose`
+me muestra la url del repositorio propio al cual estoy vinculado remotamente 
+
+podemos agregar otra ruta de un repositorio remoto 
+con `git remote add <nombreparafetch> urlDelRepooriginal` el nombre sera el equivalente a origin al cual se manda el push, es como identificamos ese repositorio 
+
+verificamos con git remote -v y deberia aparecer el repositorio original con el nombre que le dimos y url ajena  y el de nosotros con nombre origin
+
+luego jalamos los cambios del repositorio original al nuestro con un `git fetch nombreRepo master`
+y luego hacer merge de la rama oculta que trae el fetch 
+
+tambien puedo hacer un `git pull nombreRepo master`
+
 
 
 ##### Notas para adjuntar 
@@ -405,5 +423,9 @@ elimina la rama local
 para saber cual rama no hemos fusionado usamos el comando `git branch --no--merge` u listara solo las que estan con desarrollos independientes a la principal 
 
 
+
+### cuidado con los merge 
+
+cuando hacemos un merge de una rama a la que se le borro alguna caracteristica NO MOSTRARA mensaje de conflictos porque git no detecta conflictos con lineas que no existen, esto se produciria como un cambio natural 
 
 
