@@ -438,3 +438,15 @@ es un GUI git user interface
 
 en la ventana izquierda en workspace me muestra el git status  , automaticamente detectara los cambios y mostra la diferencia 
 graficamente muestra si estan en stagin o no y puedo hacer el commit desde la misma pestaña 
+
+la pestaña de history es el equivalente del git log de la terminal 
+
+cuando hacemos commit empieza un contador en el boton de push indicando cuantos commit no estan en remoto 
+
+al hacer el push con el boton me muestra las ramas que tengo configuradas hacia las cuales puedo hacer el push 
+
+navegando por el historial de sourcetre no se cambia el estado de los archivos 
+
+se muestran los diferentes archivos mmodificados y sus diferencias 
+
+para salta de rama en source en branches doy click derecho y checkout rama 
