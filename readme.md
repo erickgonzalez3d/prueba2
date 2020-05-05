@@ -453,3 +453,5 @@ para saltar  de rama en source en branches doy click derecho y checkout rama
 
 si cambio de rama desde terminal en sourcetree tambien cambiara y reconocera tambien los cambios de los archivos 
 
+ Cuidado si cambio de rama en source, la terminal no mostrara el cambio de rama solo hasta que haga el commit debo volver a cambiar de rama para hacer commit en la rama que desee 
+ 
