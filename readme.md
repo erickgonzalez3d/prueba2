@@ -459,8 +459,11 @@ si cambio de rama desde terminal en sourcetree tambien cambiara y reconocera tam
  
 debo tener cuidado porque cuando cambio de rama en source no lo hace en terminal y al hacer el push lo manda a la rama en la que estoy en source debo verificar antes la rama con git branch 
 
-tengo problema con la rama testing en source cuando hago el commit y el push no aparecen en source, tengo que dar clic al la rama en historia para que se actualize 
+tengo problema con la rama testing en source cuando hago el commit y el push no aparecen en el historial source, tengo que dar clic al la rama en historia u saltar entre ramas  para que se actualize 
 
 si no hago los commits  desde la terminal sourcetree los va reconociendo simultaneamente 
+
+en la primera pestaña donde se muestra la lista de repositorios para abrirlos observo en que rama estoy ubicado en cada repositorio
+
 
 
