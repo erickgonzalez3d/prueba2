@@ -438,3 +438,7 @@ es un GUI git user interface
 
 en la ventana izquierda en workspace me muestra el git status  , automaticamente detectara los cambios y mostra la diferencia 
 graficamente muestra si estan en stagin o no y puedo hacer el commit desde la misma pestaña 
+
+debo tener cuidado porque cuando cambio de rama en source no lo hace en terminal 
+
+"
