@@ -77,7 +77,7 @@ con el comando `git log --after="AAAA-MM-DD hh:mm:ss`
 
 con el comando ""`git log --before="AAAA-MM-DD hh:mm:ss`"
 
-para filtrar en un rango de tiempo podemos conbinar usando --after="AAAA-MM-DD hh:mm:ss"  --before="AAAA-MM-DD hh:mm:ss" y nos mostrara los commit hechos en dicho rango de tiempo
+para filtrar en un rango de tiempo podemos combinar usando --after="AAAA-MM-DD hh:mm:ss"  --before="AAAA-MM-DD hh:mm:ss" y nos mostrara los commit hechos en dicho rango de tiempo
 
 git commit --amend se usa para cambiar el nombre del commit, pero tambien para agregar nuevos cambios que talvez no habia hecho o que estaban en el directorio pero no estaban en zona traking cuando hice el commit ..
 dd
@@ -479,4 +479,33 @@ con el boton de terminal abrimos la terminal si tenemos git bash
    
 
 
+
+De igual manera puedo tener los dos repositorios de las dos terminales distintas abiertos en sourcetree y mandar los push hacia los repositorios que tenga configurados 
+
+de todas manera hay acciones en la terminal que no ofrece la GUI sourcetree como filtrar los commits por fecha 
+
+### merge y branch desde sourcetree 
+podemos indicarle graficamente a cual rama estoy haciendolo y habilitar la opcion de hacer merge si no hay conflictos,
+luego aparece una ventana para seleccionar la rama 
+
+# BITBUCKET
+es un servicio similar a github para subir repositorios en la nube 
+
+## vincularnos con un repositorio remoto de bitbucket 
+despues de loguearnos como en cualquier pagina con un email creamos un repositorio 
+
+en terminal vemos los repositorios remotos con `git remote -v`
+para no confundir los nombres de origin puedo cambiar los nombres de los repositorios que estan vinculados a github con " git remote rename <nombreViejo> <nombreNuevo> " 
+
+luego vinculo el repositorio de bitbucket con el mismo nombre con 'git remote add bitbucket <url>'
+
+si listamos de nuevo los repositorios remotos debe aparecer el de github y el de bitbucket git remote -v 
+ya estamos vinculados con el repositorio de bitbucket y falta enviarle los archivos con push 
+
+##### usamos  "git push -u " <  cuando es el primer push hacia el remoto>
+
+siempre asegurandonos que estamos en el directorio del repo 
+git push -u <nomRepo>  <rama>   podemos hacer un git push -u <nomRepo> --all para empujar todas las ramas pero si no queremos subirlas todas lo hacemos por rama  "
+
+ 
 
