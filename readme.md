@@ -449,4 +449,7 @@ navegando por el historial de sourcetre no se cambia el estado de los archivos
 
 se muestran los diferentes archivos mmodificados y sus diferencias 
 
-para salta de rama en source en branches doy click derecho y checkout rama 
+para saltar  de rama en source en branches doy click derecho y checkout rama 
+
+si cambio de rama desde terminal en sourcetree tambien cambiara y reconocera tambien los cambios de los archivos 
+
