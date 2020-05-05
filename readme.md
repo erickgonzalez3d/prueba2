@@ -463,7 +463,20 @@ tengo problema con la rama testing en source cuando hago el commit y el push no 
 
 si no hago los commits  desde la terminal sourcetree los va reconociendo simultaneamente 
 
-en la primera pestaña donde se muestra la lista de repositorios para abrirlos observo en que rama estoy ubicado en cada repositorio
+### abrir proyecto y cambiar nombre 
+
+ en la primera pestaña donde se muestra la lista de repositorios para abrirlos observo en que rama estoy ubicado en cada repositorio y puedo cambiar el nombre del Rep que se muestra en source (el local NO cambia)
+si doy click en el listado se abrira el proyecto 
+
+### la pestaña REMOTES 
+Nos mostrara los repositorios a los cuales estemos vinculados remotamente y en cada uno de ellos la ramas  
+
+con el boton de terminal abrimos la terminal si tenemos git bash 
+
+# usar varios usuario con el uso de terminal de ubuntu 
+   
+   puedo usar otra terminal de ubuntu con otro repositorio local y conffigurar el nombre de usuario y la contraseña de github y a la vez tener la terminal de github
+   
 
 
 
