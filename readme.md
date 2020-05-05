@@ -422,13 +422,19 @@ elimina la rama del repositorio remoto
 elimina la rama local 
 
 
-###  `git branch --no--merge`
+## `git branch --no--merge`
 para saber cual rama no hemos fusionado usamos el comando `git branch --no--merge` u listara solo las que estan con desarrollos independientes a la principal 
 
 
 
-### cuidado con los merge 
+## cuidado con los merge 
 
 cuando hacemos un merge de una rama a la que se le borro alguna caracteristica NO MOSTRARA mensaje de conflictos porque git no detecta conflictos con lineas que no existen, esto se produciria como un cambio natural 
 
 
+# trabajo con sourcetree
+
+es un GUI git user interface 
+
+en la ventana izquierda en workspace me muestra el git status  , automaticamente detectara los cambios y mostra la diferencia 
+graficamente muestra si estan en stagin o no y puedo hacer el commit desde la misma pestaña 
