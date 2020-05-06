@@ -495,7 +495,7 @@ es un servicio similar a github para subir repositorios en la nube
 despues de loguearnos como en cualquier pagina con un email creamos un repositorio 
 debo crearlo vacio para subir archivos que tenga locales si no me pedira hacer un pull del readme.md por defecto
 
-cuando creamos un repositorio en bitbucket y le decimos que nos adicione el archivo  README.md ese va a contar como el primer commit de la historia y cuando vaya a hacer el push de mis archivos, los historiales coincidiran y  nos pedira que hagamos un pull para sincronizar los repositorios pero no estaran relacionados porque la historia del remoto es la del readme del remoto, diferente a la de readme.md local que tiene nuestro trabajo, saldra error de Git "fatal: refusing to merge unrelated histories " se produce cuando se fusionan dos proyectos no relacionados (es decir, proyectos que no son conscientes de la existencia de la otra y tienen historias de compromiso que no coinciden).
+cuando creamos un repositorio en bitbucket y le decimos que nos adicione el archivo  README.md ese va a contar como el primer commit de la historia y cuando vaya a hacer el push de mis archivos, los historiales coincidiran y  nos pedira que hagamos un pull para sincronizar los repositorios pero no estaran relacionados porque la historia del remoto es la del readme del remoto, diferente a la de readme.md local que tiene nuestro trabajo, saldra error de Git "fatal: refusing to merge unrelated histories " se produce cuando se fusionan dos proyectos no relacionados (es decir, proyectos que no son conscientes de la existencia de la otra y tienen historias de compromiso que no coinciden). 
   
 
 en terminal vemos los repositorios remotos con `git remote -v`
