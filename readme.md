@@ -510,4 +510,5 @@ siempre asegurandonos que estamos en el directorio del repo
 git push -u <nomRepo>  <rama ACTUAL a empujar>   podemos hacer un git push -u <nomRepo> --all para empujar todas las ramas pero si no queremos subirlas todas lo hacemos por rama  "
 
  
+este commit antes de fusionar la rama1 de bitbucket 
 
