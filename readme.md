@@ -527,6 +527,11 @@ ya estamos vinculados con el repositorio de bitbucket y falta enviarle los archi
 en la interfaz puedo elegir el commit desde el cual se hace la bifurcación 
 cuando hago el commit puedo activar la casilla para que haga un push al remoto.  si no hay rama de ese nombre remotamente se creara 
 al hacer un push la interfaz me da a elegir la rama a la cual hacerlo 
+si hago push y tengo varios remotos el boton del push seguira notificando que hay uno o mas pendientes hasta que se hayan enviado a todos los remotos 
+para eliminar un repositorio remoto usamos <git remote remove (nombreREPO)>
+
+### configural repositorio con sourcetree 
+
 
 ##### usamos  "git push -u " <  cuando es el primer push hacia el remoto>
 
