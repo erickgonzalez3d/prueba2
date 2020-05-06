@@ -442,4 +442,4 @@ graficamente muestra si estan en stagin o no y puedo hacer el commit desde la mi
 debo tener cuidado porque cuando cambio de rama en source no lo hace en terminal 
 
 este linea continua por testing 
-como no 
+combio para subir al testing de bitbucket
