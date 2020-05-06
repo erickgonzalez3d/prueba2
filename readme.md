@@ -522,6 +522,12 @@ luego vinculo el repositorio de bitbucket con el mismo nombre con 'git remote ad
 si listamos de nuevo los repositorios remotos debe aparecer el de github y el de bitbucket git remote -v 
 ya estamos vinculados con el repositorio de bitbucket y falta enviarle los archivos con push 
 
+## ramas en bitbucket 
+
+en la interfaz puedo elegir el commit desde el cual se hace la bifurcación 
+cuando hago el commit puedo activar la casilla para que haga un push al remoto.  si no hay rama de ese nombre remotamente se creara 
+al hacer un push la interfaz me da a elegir la rama a la cual hacerlo 
+
 ##### usamos  "git push -u " <  cuando es el primer push hacia el remoto>
 
 siempre asegurandonos que estamos en el directorio del repo 
