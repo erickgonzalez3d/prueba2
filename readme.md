@@ -515,7 +515,7 @@ este commit antes de fusionar la rama1 de bitbucket
 
 no me deja fusiona nEl error de Git "fatal: refusing to merge unrelated histories " se produce cuando se fusionan dos proyectos no relacionados (es decir, proyectos que no son conscientes de la existencia de la otra y tienen historias de compromiso que no coinciden).
 
-visor de svg
+visor de svg elimar esta linea 
 Considere los siguientes dos casos que arrojan este error:
 
 Ha clonado un proyecto y, de alguna manera, el .gitdirectorio se eliminó o corrompió. Esto lleva a Git a desconocer su historial local y, por lo tanto, provocará que arroje este error cuando intente empujar hacia o desde el repositorio remoto.
