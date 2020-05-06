@@ -512,3 +512,18 @@ git push -u <nomRepo>  <rama ACTUAL a empujar>   podemos hacer un git push -u <n
  
 este commit antes de fusionar la rama1 de bitbucket 
 
+
+no me deja fusiona nEl error de Git "fatal: refusing to merge unrelated histories " se produce cuando se fusionan dos proyectos no relacionados (es decir, proyectos que no son conscientes de la existencia de la otra y tienen historias de compromiso que no coinciden).
+
+visor de svg
+Considere los siguientes dos casos que arrojan este error:
+
+Ha clonado un proyecto y, de alguna manera, el .gitdirectorio se eliminó o corrompió. Esto lleva a Git a desconocer su historial local y, por lo tanto, provocará que arroje este error cuando intente empujar hacia o desde el repositorio remoto.
+
+Ha creado un nuevo repositorio, le ha agregado algunas confirmaciones y ahora está intentando extraerlo de un repositorio remoto que ya tiene algunas confirmaciones propias. Git también arrojará el error en este caso, ya que no tiene idea de cómo se relacionan los dos proyectos.
+
+Solución
+El error se resuelve al alternar el interruptor de permitir historias no relacionadas . Después de un comando git pull o git merge, agregue la siguiente etiqueta:
+
+git pull origin master --allow-unrelated-histories
+
