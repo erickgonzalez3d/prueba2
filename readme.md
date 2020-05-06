@@ -499,13 +499,19 @@ debo crearlo vacio para subir archivos que tenga locales si no me pedira hacer u
 
 cuando creamos un repositorio en bitbucket y le decimos que nos adicione el archivo  README.md ese va a contar como el primer commit de la historia y cuando vaya a hacer el push de mis archivos, los historiales coincidiran y  nos pedira que hagamos un pull para sincronizar los repositorios pero no estaran relacionados porque la historia del remoto es la del readme del remoto, diferente a la de readme.md local que tiene nuestro trabajo, saldra error de Git "fatal: refusing to merge unrelated histories " se produce cuando se fusionan dos proyectos no relacionados (es decir, proyectos que no son conscientes de la existencia de la otra y tienen historias de compromiso que no coinciden). 
 
-para solucionar ese error tendriamos que crear una rama alterna desde el commit donde nos encontremos y desde la rama master borrar el readme.md y dejar el master en blanco   para no tener confllictos, luego hacer un 
+para solucionar ese error tendriamos que crear una rama alterna desde el commit donde nos encontremos y y dejar el master en blanco   para no tener confllictos, luego hacer un 
 git pull origin master --allow-unrelated-histories
 
+desde la rama master borrar el readme.md y los archivos que tengan conflictos 
+git add y commit de los cambios 
 volver a hacer un push para sincronizar 
 
-luego borrar el readme.md  que viene por defecto y despues puedo volver a fusionar las ramas 
+luego de borrar el readme.md  que viene por defecto, puedo volver a fusionar las ramas con la que habia hecho la copia 
+hacer el commit y el push de ese merge y ya estaran sincronizadas  
 si no me deja fusionar porque tienen historias distinta puedo copiar y peguar el contenido de los archivos y volver a hacer push 
+
+pero mejor crear el repo sin el readme y este recibira el primer push que hagamos sin conflictos de historiales 
+
 
 
 en terminal vemos los repositorios remotos con `git remote -v`
