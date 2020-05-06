@@ -532,6 +532,7 @@ para eliminar un repositorio remoto usamos <git remote remove (nombreREPO)>
 
 ### configural repositorio con sourcetree 
 
+creamos el repositorio remoto vacio, despues clicando en el boton de settings de sourcetree ponemos la url del repo con el servidor y usuario que vamos a usar y despues hacemos un push y ya estara nuetro repositorio local  subido  
 
 ##### usamos  "git push -u " <  cuando es el primer push hacia el remoto>
 
