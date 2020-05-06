@@ -493,8 +493,10 @@ es un servicio similar a github para subir repositorios en la nube
 
 ## vincularnos con un repositorio remoto de bitbucket 
 despues de loguearnos como en cualquier pagina con un email creamos un repositorio 
+debo crearlo vacio para subir archivos que tenga locales si no me pedira hacer un pull del readme.md por defecto
 
-debo crearlo vacio para subir archivos que tenga locales si no me pedira hacer un pull del readme.md por defecto  
+cuando creamos un repositorio en bitbucket y le decimos que nos adicione el archivo  README.md ese va a contar como el primer commit de la historia y cuando vaya a hacer el push de mis archivos, los historiales coincidiran y  nos pedira que hagamos un pull para sincronizar los repositorios pero no estaran relacionados porque la historia del remoto es la del readme del remoto, diferente a la de readme.md local que tiene nuestro trabajo, saldra error de Git "fatal: refusing to merge unrelated histories " se produce cuando se fusionan dos proyectos no relacionados (es decir, proyectos que no son conscientes de la existencia de la otra y tienen historias de compromiso que no coinciden).
+  
 
 en terminal vemos los repositorios remotos con `git remote -v`
 para no confundir los nombres de origin puedo cambiar los nombres de los repositorios que estan vinculados a github con " git remote rename <nombreViejo> <nombreNuevo> " 
@@ -507,16 +509,12 @@ ya estamos vinculados con el repositorio de bitbucket y falta enviarle los archi
 ##### usamos  "git push -u " <  cuando es el primer push hacia el remoto>
 
 siempre asegurandonos que estamos en el directorio del repo 
+
 git push -u <nomRepo>  <rama ACTUAL a empujar>   podemos hacer un git push -u <nomRepo> --all para empujar todas las ramas pero si no queremos subirlas todas lo hacemos por rama  "
 
  
-este commit antes de fusionar la rama1 de bitbucket 
 
-
-no me deja fusiona nEl error de Git "fatal: refusing to merge unrelated histories " se produce cuando se fusionan dos proyectos no relacionados (es decir, proyectos que no son conscientes de la existencia de la otra y tienen historias de compromiso que no coinciden).
-
-visor de svg elimar esta linea 
-Considere los siguientes dos casos que arrojan este error:
+Considere los siguientes dos casos que arrojan este error: Git "fatal: refusing to merge unrelated histories "
 
 Ha clonado un proyecto y, de alguna manera, el .gitdirectorio se eliminó o corrompió. Esto lleva a Git a desconocer su historial local y, por lo tanto, provocará que arroje este error cuando intente empujar hacia o desde el repositorio remoto.
 
