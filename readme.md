@@ -510,7 +510,9 @@ ya estamos vinculados con el repositorio de bitbucket y falta enviarle los archi
 
 siempre asegurandonos que estamos en el directorio del repo 
 
-git push -u <nomRepo>  <rama ACTUAL a empujar>   podemos hacer un git push -u <nomRepo> --all para empujar todas las ramas pero si no queremos subirlas todas lo hacemos por rama  "
+git push -u <nomRepo>  <rama ACTUAL a empujar>   podemos hacer un git push -u <nomRepo> --all para empujar todas las ramas pero si no queremos subirlas todas lo hacemos por rama  " 
+
+siempre debo estar en la rama que voy a hacer el push  desde una rama segundaria no me deja enviar al master 
 
  
 
