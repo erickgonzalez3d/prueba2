@@ -557,3 +557,11 @@ El error se resuelve al alternar el interruptor de permitir historias no relacio
 
 git pull origin master --allow-unrelated-histories
 
+### vim como editor de texto 
+para que los commits se puedan hacer desde la terminal podemos configurar 
+
+`git config --global core.editor "vim" `  el nombre del editor entre comillas 
+
+# conexión ssh 
+## github 
+
