@@ -602,6 +602,7 @@ la copiamos abriendo su contenido con cat /ruta/indicada/llave.pub y copio todo 
   añadimos la clave con `ssh-add /ruta/llave/nombre
 
   verificamos los repositorios remotos y ya deberia dejar hacer push a los distintos repositorios 
+  tambien deberian poder hacer push desde el cliente grafico 
    
 
 
