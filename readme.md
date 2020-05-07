@@ -574,8 +574,9 @@ se generara una llave en el directorio , esa es la llave ,  para ver el contenid
 -copiamos todo el contenido de la llave pub 
 -vamos a nuestra cuenta de github a settings, despues a <ssh and GPG keys> en el boton de new key y pegamos el contenido de la .pub le ponemos un titulo y clicamos en add new key 
 -vamos al repositorio y copiamos el enlace de conexión por ssh 
--agregamos el repositorio remoto por conexión ssh con `git remote add nomRepSSH url`
--activamos el agente ssh con `eval "$(ssh-agent -s)
+-agregamos el repositorio remoto por conexión ssh con `git remote add nomRepSSH url` 
+-activamos el agente ssh con `eval "$(ssh-agent -s)"`
+
 -en el directorio local agregamos la llave con el comando <ssh-add /c/llaves-ssh/nomKey>
 -verificamos que estemos vinculados con <git remote -v >
 -la primera vez que hago un push hacia un repositorio con llave ssh me pregunta si estoy seguro de conectarme decimos <yes>
