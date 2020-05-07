@@ -542,7 +542,7 @@ siempre asegurandonos que estamos en el directorio del repo
 
 git push -u <nomRepo>  <rama ACTUAL a empujar>   podemos hacer un git push -u <nomRepo> --all para empujar todas las ramas pero si no queremos subirlas todas lo hacemos por rama  " 
 
-siempre debo estar en la rama que voy a hacer el push  desde una rama segundaria no me deja enviar al master 
+siempre hay que estar en la rama que voy a hacer el push  desde una rama segundaria no me deja enviar al master 
 
  
 
@@ -563,5 +563,26 @@ para que los commits se puedan hacer desde la terminal podemos configurar
 `git config --global core.editor "vim" `  el nombre del editor entre comillas 
 
 # conexión ssh 
+
+-vamos a disco c y creamos un directorio para las llaves ssh para evitat problemas de rutas 
+-ejecutamos el comando `ssh-keygen -t rsa -C "email@gmail.com " --> se coloca el correo con el que nos registramos en github 
+-indicamos la ruta del directorio   /c/llaves-ssh/nombrellave 
+
+se generara una llave en el directorio , esa es la llave ,  para ver el contenido usamos cat
+
+-cat /c/llaves-ssh/nombrellave.pub   esa es la llave publica que se registra en github 
+-copiamos todo el contenido de la llave pub 
+-vamos a nuestra cuenta de github a settings, despues a <ssh and GPG keys> en el boton de new key y pegamos el contenido de la .pub le ponemos un titulo y clicamos en add new key 
+-vamos al repositorio y copiamos el enlace de conexión por ssh 
+-agregamos el repositorio remoto por conexión ssh con `git remote add nomRepSSH url`
+-activamos el agente ssh con `eval "$(ssh-agent -s)
+-en el directorio local agregamos la llave con el comando <ssh-add /c/llaves-ssh/nomKey>
+-verificamos que estemos vinculados con <git remote -v >
+
+de esta formma podemos mandar push sin que nos pregunte el usuario y contraseña para cada repositorio que configuremos con la llave 
+
+
+
 ## github 
 
+clono el repositorio 
