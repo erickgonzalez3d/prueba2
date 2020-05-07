@@ -602,7 +602,9 @@ la copiamos abriendo su contenido con cat /ruta/indicada/llave.pub y copio todo 
   añadimos la clave con `ssh-add /ruta/llave/nombre
 
   verificamos los repositorios remotos y ya deberia dejar hacer push a los distintos repositorios 
-  tambien deberian poder hacer push desde el cliente grafico 
+  tambien deberian poder hacer push desde el cliente grafico sin no me permite hacer el push con el error de ssh cambio la configuración    tools/option/general/SSH client configuration cambio PuTTy por OpenSSH y agrego la ruta de la llave privada 
+
+  
    
 
 
