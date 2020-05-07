@@ -586,7 +586,23 @@ de esta formma podemos mandar push sin que nos pregunte el usuario y contraseña
 
 hago los cambios y el commit enviandolo con ssh y verifico el remoto y deberan estar los cambios actualizados 
 
+## dos o mas repos en ssh 
+-para conectar dos o mas cuentas creamos la clave ssh en un directorio en disco c
+ejecutamos `ssh-keygen -t rsa -C "emailConElQueEstemosLogueadosEnLosServidores@elmismoEntreCommillas.com" y la terminal nos pedira la ubicacion donde ponerla, si no la indicamos pone una por defecto 
 
+
+ en la carpeta se crearon dos archivos  la llave.pub la configuramos como una ssh key en cada cuenta que tengamos github,bitbucket,gitlab  
+la copiamos abriendo su contenido con cat /ruta/indicada/llave.pub y copio todo el contenido del archivo y lo pego en la configuracion de ssh de cada cuenta github, bitbuc....etc 
+ 
+ agregamos los repositorios remotos con 
+ git remote add nom.paracadauno linkSSH
+
+- luego vamos al directorio del repositorio local
+  activamos el agente ssh con `eval "$(ssh-agent -s)"`
+  añadimos la clave con `ssh-add /ruta/llave/nombre
+
+  verificamos los repositorios remotos y ya deberia dejar hacer push a los distintos repositorios 
+   
 
 
 
