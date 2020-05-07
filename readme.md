@@ -578,8 +578,14 @@ se generara una llave en el directorio , esa es la llave ,  para ver el contenid
 -activamos el agente ssh con `eval "$(ssh-agent -s)
 -en el directorio local agregamos la llave con el comando <ssh-add /c/llaves-ssh/nomKey>
 -verificamos que estemos vinculados con <git remote -v >
+-la primera vez que hago un push hacia un repositorio con llave ssh me pregunta si estoy seguro de conectarme decimos <yes>
+
 
 de esta formma podemos mandar push sin que nos pregunte el usuario y contraseña para cada repositorio que configuremos con la llave 
+
+hago los cambios y el commit enviandolo con ssh y verifico el remoto y deberan estar los cambios actualizados 
+
+
 
 
 
