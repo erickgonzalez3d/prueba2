@@ -10,6 +10,11 @@ con los comandos ls y cd desde la terminal de git nos ubicamos en el directorio 
  inicializamos el repositorio en git {git init}
  (esto crea una carpeta oculta .git)dentro del directorio  con los archivos de git 
 
+ `git init nombre123` crea una carpeta con un repositorio de nombre123 
+
+ para borrar el ropositorio rm -rf .git 
+  
+
  git clone tambien inicia el repositorio con la historia heredada el nombre de ese repo es origin por defecto 
  
  git init --bare inicia repositorio compartido vacio, debo estar en un servidor para que los coloboradores a los que se le de permisos  puedan clonarlo y trabajar en el sus computadores 
@@ -637,6 +642,11 @@ la copiamos abriendo su contenido con cat /ruta/indicada/llave.pub y copio todo 
 - luego vamos al directorio del repositorio local
   activamos el agente ssh con `eval "$(ssh-agent -s)"`
   añadimos la clave con `ssh-add /ruta/llave/nombre
+
+
+  puedo tener los repositorios que desee con la misma llave agregandola a los directorios y evaluando el agente ssh  `eval "$(ssh-agent -s)",
+
+  
 
   ### si voy a agregar otro repositorio despues 
   borro la llave y la creo nuevamente despues  corro el agente ssh y ejecuto el ssh-add para actualizar y que no haya problemas  
