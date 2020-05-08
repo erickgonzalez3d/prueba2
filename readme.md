@@ -8,7 +8,15 @@ lo podemos hacer manualmente o desde la terminal de git con el comando mkdir TRA
 con los comandos ls y cd desde la terminal de git nos ubicamos en el directorio TRABAJOprincipal
 
  inicializamos el repositorio en git {git init}
- (esto crea una carpeta oculta .git)dentro del directorio  con los archivos de git
+ (esto crea una carpeta oculta .git)dentro del directorio  con los archivos de git 
+
+ git clone tambien inicia el repositorio con la historia heredada el nombre de ese repo es origin por defecto 
+ 
+ git init --bare inicia repositorio compartido vacio, debo estar en un servidor para que los coloboradores a los que se le de permisos  puedan clonarlo y trabajar en el sus computadores 
+
+ git clone --bare clona el repositorio compartido 
+
+
 
  creamos o ponemos documentos, estos estan en el directorio pero no estan en el repositorio y tampoco estan trakeados.
 
@@ -29,6 +37,15 @@ cuando borro un archivo del directorio que estaba en el repositorio, git nota el
 puedo ahorrarme el commando de git add agregando parametros al comando commit el -a agragara el archivo a la zona de preparación -m el mensaje y los puedo unir y funcionan igual  -am  seria `git commit -am "mensaje" `
 
 para ver el cambio en un archivo uso comando (git diff) esto lo puedo hacer cuando hago un cambio en el archivo y todavia no he hecho el git add    
+git diff [branch1] [branch2] diferencias entre ramas 
+git diff - -staged diferencia con el que esta en zona de preparación 
+
+git show commit muestra los datos del commit 
+
+git reset HEAD   --> Marca para que no se incluya en el commit 
+git reset- -soft HEAD deshace los cambios del commit 
+git reset --hard HEAD restablece la versión al ultimo commit 
+git clean --> elimina archivo que no esten en el arbol local 
 
 
 puedo hacer un cambio cuando el archivo esta en zona de espera o trakeado, y al hacer un git status me mostrara el archivo trakeado del ultimo git add y el archivo con  el ultimo cambio (pues no he dado git add a ese cambio) y me mostrara los dos archivos en output de consola git
@@ -47,11 +64,23 @@ cuando estamos trabajando con archivos que no queramos meter en el repositorio c
   git add -A
   este comando le hace un git add a todos los archivos que ya estaban trakeados  
 
+git reset --hard commit   --> resetea la rama al estado del commit borrando las que esten por delante 
+git reset --soft commit  --> resetea la rama al estado del commit dejando las que estan por delante en staging 
+
+el HEAD es un apuntador o archivo que guarda la sumatoria de los cambios mediante un algoritmo que genera un numero que es el commit al que apunta el HEAD, se va cambiando con cada commit 
+
 <git log> es el comando que muestra los commit hechos hasta el momento,
 cuando agrego --decorate me resalta la información principal del commit
 si agrego --all me muestra todos los commits aunque esten por delante en el tiempo
 --oneline me mostrara una solo linea con el commit
 --graph muestra un mapa en codigo como ayuda grafica
+--author=nombre  muestra los commits de esa persona 
+
+git rm archivo  borra el archivo del historial y no lo deja en papelera 
+
+git mv archi1.md  cambio.md  renombra el archivo para segui rastreandolo el primer cambio lo reconoce como un archivo nuevo  si vuelvo a cambiar el nombre reconoce el renombrado y no lo deja de trakear 
+si lo muevo a una carpeta ejemplo  archi1 mv carpeta/archi1 lo tomara de nuevo como un renonbramiento 
+
 
 al hacer un git add a todos los archivos trabajados el commit guarda los cambios de todos
 
@@ -158,7 +187,9 @@ Puedo filtrar las etiqueta en comun como por ejemplo las versione v1, v1.2, v1.3
 
 asi como borro las ramas tambien puedo borrar las etiquetas con el comando `git tag -d nomEtiqueta`
 
-y al igual que las ramas cuando se borra lo que eliminamos es el apuntador del commit pero no borramos el commit en si ya que este hace parte del historial de modificación
+y al igual que las ramas cuando se borra lo que eliminamos es el apuntador del commit pero no borramos el commit en si ya que este hace parte del historial de modificación 
+
+git push origin rama --tags   -->empujara las etiquetas al remoto 
 
 
 # ramas
@@ -191,6 +222,11 @@ no hay un limite en la cantidad de ramas a crear
 la rama master esta por defecto pero si se sigue deserrollando a lo largo de una rama esa podria ser la rama principal <cualquier rama puede ser la principal>
 
 
+   #### borrar una rama remoto
+    con  `git push origin :nmbreRama`  
+
+git remote show --> muestra la informacion del repositorio remoto como url, posicion del HEAD, commit, rama 
+
 tambien puedo generar commit en las distintas ramas y estas tomaran su propio camino
 
 puedo ver las ramas oculta con git branch --all y me mostrara la ramas que hay tanto el local como en linea
@@ -205,6 +241,7 @@ primero verificamos en que rama estamos ubicados con el HEAD `git status` o con 
 
 no necesariamente tenemos que fusionar la rama con la mas cercana podemos hacerlo con cualquier otra
 
+para revertir un merge utilizo `git reset --hard commitAnteriorAlMerge `
 ### git merge 
 
 primero tenemos que ubicarnos en la RAMA DESTINO y ejecutamos el comando git merge <rama a fusionar>
@@ -608,12 +645,20 @@ la copiamos abriendo su contenido con cat /ruta/indicada/llave.pub y copio todo 
   verificamos los repositorios remotos y ya deberia dejar hacer push a los distintos repositorios 
   tambien deberian poder hacer push desde el cliente grafico sin no me permite hacer el push con el error de ssh cambio la configuración    tools/option/general/SSH client configuration cambio PuTTy por OpenSSH y agrego la ruta de la llave privada 
 
-   
+   # cambios en calienter hot fix 
+   trabajamos con dos tipos de ramas.
+   # las ramas de desarrollo 
+   son las ramas donde se trabaja sobre una aplicación o caracteristica completa del proyecto , junto con la rama de produccion que es a la que vamos a hacerle merge y publicar 
 
-   
+   ## las ramas puntuales 
+   se crean para hacer cambios especificos de una caracteristica 
 
+   ### administracion de servidores 
+
+   podemos crear un servidor privado con Droplets 
 
 
 ## github 
 
 clono el repositorio 
+prueba para la llave 
