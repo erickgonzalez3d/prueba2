@@ -601,11 +601,13 @@ la copiamos abriendo su contenido con cat /ruta/indicada/llave.pub y copio todo 
   activamos el agente ssh con `eval "$(ssh-agent -s)"`
   añadimos la clave con `ssh-add /ruta/llave/nombre
 
+  si voy a agregar otro repositorio despues borro la llave y cambiarla y hacer estos pasos de nuevo 
+
   verificamos los repositorios remotos y ya deberia dejar hacer push a los distintos repositorios 
   tambien deberian poder hacer push desde el cliente grafico sin no me permite hacer el push con el error de ssh cambio la configuración    tools/option/general/SSH client configuration cambio PuTTy por OpenSSH y agrego la ruta de la llave privada 
 
   anadir primero el repositorio por https y despues por ssh,  despues si quiero elimino la conexión por https 
-  
+
    
 
 
