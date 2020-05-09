@@ -423,12 +423,23 @@ en el historial de commits se veran los commits de las personas que colaboraron.
 cuando el editor original acepta los cambios llega un correo al editor colaborador 
 se debe activar la opcion watching en github para que lleguen los correos 
 
+
+
+
 #### issues en github  
 es la forma de informar los errores  se puede asignar a una persona , iniciar una conversación, crear etiqueta del problema, 
 
 ### web con github
 
-subo los archivos estaticos  html, javascript, css en settings  
+subo los archivos estaticos  html, javascript, css 
+en settings  busco github page y selecciono la rama donde esten los archivos 
+le cambio el nombre y ya estara publicado en la url que nos muestre 
+
+##### personalizar el dominio 
+despues de haberlo comprado , hay que crear un archivo en el repositorio llamado CNAME sin extension y lo unico que va a tener ese archivo sera el dominio
+vamos a settings y el la casilla  de custom agregamos el dominio 
+
+si el dominio es de namecheap cambio las DNS quito la de namecheap y pongo los 2 dns de github que sean de tipo `A Record` y value el numero de ip de github y TTL automatic, tambien puedo poner una tipo CNAME Record y la ruta de github nombrecuenta.github.io. con el punto al final tambien automatico 
 
 # pasos para los aportes 
 1. Hacer un fork de algun repositorio 
