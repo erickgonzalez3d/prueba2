@@ -98,6 +98,8 @@ si el archivo .gitignore se sigue mostrando en el git status puedo agregar el no
 
 tambien podemos hacer un git add .gitignore
 
+puedo ir a gitignore.io para descargar el archivo de acuerdo al lenguaje del proyecto 
+
 el comando `git log --oneline`  muestra los commits como una lista con sus titulos o mensajes
 
 el comando `git log --graph` muestra los commit con sus ramificaciones en un grafico
