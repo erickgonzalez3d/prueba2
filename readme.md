@@ -90,7 +90,7 @@ si lo muevo a una carpeta ejemplo  archi1 mv carpeta/archi1 lo tomara de nuevo c
 al hacer un git add a todos los archivos trabajados el commit guarda los cambios de todos
 
 para cambiar el commit uso git commit --amend
-
+#### git ignore 
 para ignorar archivos y no agregarlos en los commits creo el archivos .gitignore y en el
 escribo los nombres de los archivos a ignorar
 
@@ -99,6 +99,7 @@ si el archivo .gitignore se sigue mostrando en el git status puedo agregar el no
 tambien podemos hacer un git add .gitignore
 
 puedo ir a gitignore.io para descargar el archivo de acuerdo al lenguaje del proyecto 
+
 
 el comando `git log --oneline`  muestra los commits como una lista con sus titulos o mensajes
 
@@ -402,7 +403,8 @@ ahora puedo hacer push desde repositorios distintos con diferentes usuarios
 = para trabajar desde una maquina con un solo usuario puedo eliminar la anterior configuración 
 
 ### pull request 
-
+puedo agregar un templete para los pull request en github
+se debe protejer la rama principal de los proyectos para que solo se agreguen cambios si se revisan primero  
 en github puedo crear el archivo pull_request_template.md y sera el que se mostrara cuando intenten hacer pull request 
 --- que ha cambiado?
     - [ ]   cosa 1  a cambiar 
@@ -421,6 +423,12 @@ en el historial de commits se veran los commits de las personas que colaboraron.
 cuando el editor original acepta los cambios llega un correo al editor colaborador 
 se debe activar la opcion watching en github para que lleguen los correos 
 
+#### issues en github  
+es la forma de informar los errores  se puede asignar a una persona , iniciar una conversación, crear etiqueta del problema, 
+
+### web con github
+
+subo los archivos estaticos  html, javascript, css en settings  
 
 # pasos para los aportes 
 1. Hacer un fork de algun repositorio 
