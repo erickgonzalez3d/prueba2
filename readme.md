@@ -122,7 +122,9 @@ el git restore  saca la modificación o el archivo  nuevo del area de detección
 
 si ya lo agregue al area de preparación con <git add .> puedo sacarlo con {`git restore --staged`} y tambien funciona `{git reset HEAD |archivo|}`
 
-el git checkout quita los cambios que tenga el archivo en seguimiento pero si ya estan en la zona de preparación no los quita, se tendria que hacer un git `{restore --staged}` y despues el checkout
+el git checkout quita los cambios que tenga el archivo en seguimiento pero si ya estan en la zona de preparación los quita y los mueve a la rama que se mueva el HEAD, es como copiar y pegar esos cambios entre las ramas 
+
+hacer un git `{restore --staged}` y despues el checkout
 porque es como saltar a otra rama sin haber guardado, pero esta en commits 
 
 ## sincronizar un repositorio con github desde consola
@@ -222,9 +224,18 @@ las ramas  apuntan al commit del momento en que creamos la rama y de hay en adel
 
 si me devuelvo en el historial desde una rama alterna a un commit anterior del cual inicio esa rama no estare en esa rama
 
+git rebase reescribe la historia del repo 
 no hay un limite en la cantidad de ramas a crear
 
 la rama master esta por defecto pero si se sigue deserrollando a lo largo de una rama esa podria ser la rama principal <cualquier rama puede ser la principal>
+
+### git stash
+
+guarda el estado de la rama 
+
+### git cherry-pick sha1
+puedo trael los cambios de un commit en especifico que esta en otra rama 
+sin fusionarla toda 
 
 
    #### borrar una rama remoto
@@ -317,6 +328,10 @@ Your branch is ahead of 'origin/master' by 1 commit.
 
 este seria el mensaje , que estamos por delante de la rama origin/master por el numero de commit y que hagamos un git push para publicar nuestros commits locales
 
+    
+    los proyectos es github son como una interfaz de trello 
+    el archivo issue_Template.md  es la plantilla que aparecera cuando den clic en issues 
+
 ### traer cambios de github al repositorio local
 
 si quiero traer un repositorio de otra persona desde github hago un fork
@@ -385,6 +400,14 @@ ahora puedo hacer push desde repositorios distintos con diferentes usuarios
 = para trabajar desde una maquina con un solo usuario puedo eliminar la anterior configuración 
 
 ### pull request 
+
+en github puedo crear el archivo pull_request_template.md y sera el que se mostrara cuando intenten hacer pull request 
+--- que ha cambiado?
+    - [ ]   cosa 1  a cambiar 
+    - [ ]   cosa 2 
+    - [ ]   cosa 3 
+    como puedo comprobar los cambios 
+    
 luego de crear una rama en un repositorio clonado y realizar los cambios a los archivos puedo aportarlos a otra persona con un pull request desde la rama actual a la rama de la persona a la cual vamos a colaborar 
 luego tendremos que esperar a que la persona nos acepte o rechace el pull request 
 
@@ -612,7 +635,7 @@ para que los commits se puedan hacer desde la terminal podemos configurar
 
 se generara una llave en el directorio , esa es la llave ,  para ver el contenido usamos cat
 
--cat /c/llaves-ssh/nombrellave.pub   esa es la llave publica que se registra en github 
+-cat /c/llaves-ssh/nombrellave.pub ||||| o con pbcopy <~/ .ssh/id_rsa.pub (si la generamos hay)esa es la llave publica que se registra en github 
 -copiamos todo el contenido de la llave pub 
 -vamos a nuestra cuenta de github a settings, despues a <ssh and GPG keys> en el boton de new key y pegamos el contenido de la .pub le ponemos un titulo y clicamos en add new key (0jo no confundir llaves de cuenta con las llaves de repositorio)
 -vamos al repositorio y copiamos el enlace de conexión por ssh 
@@ -627,6 +650,9 @@ se generara una llave en el directorio , esa es la llave ,  para ver el contenid
 de esta formma podemos mandar push sin que nos pregunte el usuario y contraseña para cada repositorio que configuremos con la llave 
 
 hago los cambios y el commit enviandolo con ssh y verifico el remoto y deberan estar los cambios actualizados 
+
+## ssh por defecto 
+en nuestra maquina podemos generar una llave en ~/ .ssh/id_rsa.pub  puedo copiarla y mandarla los repos 
 
 ## dos o mas repos en ssh 
 -para conectar dos o mas cuentas creamos la clave ssh en un directorio en disco c
