@@ -1,21 +1,21 @@
-###### copia rama <nueva>
+}###### copia rama <nueva>
 # curso git desde 0
 
 flujo de trabajo en git
-primero creamos y elegimos un directorio TRABAJOprincipal
-lo podemos hacer manualmente o desde la terminal de git con el comando mkdir TRABAJOprincipal
+necesitamos tener algo de conocimiento de la linea de comandos.vamos a la termina y creamos y directorio TRABAJO 
+lo podemos hacer manualmente con la interfaz de SO, o desde la terminal de git con el comando `mkdir TRABAJOprincipal
 
 con los comandos ls y cd desde la terminal de git nos ubicamos en el directorio TRABAJOprincipal
 
  inicializamos el repositorio en git {git init}
- (esto crea una carpeta oculta .git)dentro del directorio  con los archivos de git 
+ (esto crea una carpeta oculta .git)dentro del directorio  con los archivos de git y el repositorio.
 
  `git init nombre123` crea una carpeta con un repositorio de nombre123 
 
  para borrar el ropositorio rm -rf .git 
   
 
- git clone tambien inicia el repositorio con la historia heredada el nombre de ese repo es origin por defecto 
+ git clone trae un repositorio con la historia heredada el nombre de este es origin por defecto 
  
  git init --bare inicia repositorio compartido vacio, debo estar en un servidor para que los coloboradores a los que se le de permisos  puedan clonarlo y trabajar en el sus computadores 
 
@@ -39,7 +39,8 @@ cuando borro un archivo del directorio que estaba en el repositorio, git nota el
 
  luego para guardarlo en el repositorio (git commit -m "mensaje descriptivo del cambio")
 
-puedo ahorrarme el commando de git add agregando parametros al comando commit el -a agragara el archivo a la zona de preparación -m el mensaje y los puedo unir y funcionan igual  -am  seria `git commit -am "mensaje" `
+puedo ahorrarme el commando de git add agregando parametros al comando commit el -a agregara el archivo a lstaging -m el mensaje y los puedo unir y funcionan igual  -am  seria `git commit -am "mensaje" `
+ si el commit no tiene mensaje sera abortado 
 
 para ver el cambio en un archivo uso comando (git diff) esto lo puedo hacer cuando hago un cambio en el archivo y todavia no he hecho el git add    
 git diff [branch1] [branch2] diferencias entre ramas 
